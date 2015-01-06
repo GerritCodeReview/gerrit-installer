@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "413a30aa_0da3d184",
+        "filename": "README.md",
+        "patchSetId": 9
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-01-06T07:59:53Z",
+      "side": 1,
+      "message": "This will vary per version so maybe better to not mention a specific version here?",
+      "range": {
+        "startLine": 27,
+        "startChar": 52,
+        "endLine": 27,
+        "endChar": 59
+      },
+      "revId": "3766c60f7e05b698cf14a3160ca752b2c0e983ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e0ff523_f7672007",
+        "filename": "rpmbuild/SPECS/gerrit.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-01-06T07:59:53Z",
+      "side": 1,
+      "message": "Can these lines be wrapped?",
+      "range": {
+        "startLine": 21,
+        "startChar": 0,
+        "endLine": 25,
+        "endChar": 286
+      },
+      "revId": "3766c60f7e05b698cf14a3160ca752b2c0e983ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "413a30aa_2da08d75",
+        "filename": "rpmbuild/SPECS/gerrit.spec",
+        "patchSetId": 9
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-01-06T07:59:53Z",
+      "side": 1,
+      "message": "Better to download the official WAR file?",
+      "range": {
+        "startLine": 66,
+        "startChar": 65,
+        "endLine": 66,
+        "endChar": 161
+      },
+      "revId": "3766c60f7e05b698cf14a3160ca752b2c0e983ad",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
