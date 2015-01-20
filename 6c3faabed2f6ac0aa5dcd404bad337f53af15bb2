@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ebba239b_ca6803da",
+        "filename": "fpm/Makefile",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-01-20T06:22:00Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem to be used.",
+      "range": {
+        "startLine": 16,
+        "startChar": 0,
+        "endLine": 16,
+        "endChar": 18
+      },
+      "revId": "6c3faabed2f6ac0aa5dcd404bad337f53af15bb2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
