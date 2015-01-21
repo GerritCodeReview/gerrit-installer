@@ -1,1 +1,1 @@
-/var/gerrit/bin/gerrit.sh stop
+$GERRIT_SITE/bin/gerrit.sh stop || true

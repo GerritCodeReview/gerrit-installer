@@ -6,9 +6,9 @@ NAME=gerrit
 CATEGORY=Development
 SUMMARY=Gerrit Code Review
 BUILD_ARCH=noarch
-BUILD_ROOT=build
+BUILD_ROOT=build/root
+SCRIPTS_ROOT=build/scripts
 OUT=out
-ETC=etc
 USER=gerrit
 GROUP=gerrit
 GERRIT_SITE=/var/gerrit
@@ -20,48 +20,61 @@ WAR=$(BUILD_ROOT)/bin/gerrit.war
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
-CONFIGS=$(wildcard $(ETC)/*)
+CONFIGS=$(wildcard etc/*) etc/gerritcodereview
+SCRIPTS=$(foreach script,$(wildcard scripts/*),$(notdir $(script)))
+BUILD_SCRIPTS=$(foreach script,$(SCRIPTS),$(SCRIPTS_ROOT)/$(script))
 
 FPM_OPTS=-s dir \
-	-n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) \
+	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) \
 	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" \
 	--depends git \
 	--PKG-user $(USER) --PKG-group $(GROUP) \
-	--before-install scripts/before-install.sh \
-	--after-install scripts/after-install.sh \
-	--before-remove scripts/before-remove.sh \
-	--after-remove scripts/after-remove.sh \
+	--before-install $(SCRIPTS_ROOT)/before-install.sh \
+	--after-install $(SCRIPTS_ROOT)/after-install.sh \
+	--before-remove $(SCRIPTS_ROOT)/before-remove.sh \
+	--after-remove $(SCRIPTS_ROOT)/after-remove.sh \
 	--prefix $(GERRIT_SITE) --directories $(GERRIT_SITE) --config-files $(GERRIT_SITE)/etc \
 	--verbose -C $(BUILD_ROOT) .
 
-RPM_OPTS=$(subst PKG,rpm,$(FPM_OPTS))
+RPM_OPTS=$(subst --before-install,--rpm-pretrans, $(subst PKG,rpm,$(FPM_OPTS)))
 DEB_OPTS=$(subst PKG,deb,$(FPM_OPTS))
 
 all: prepare $(RPM_OUT) $(DEB_OUT)
 
 clean:
 	rm -Rf $(OUT)
-	-grep -q gerrit /etc/passwd && userdel gerrit
 
-prepare:
-	-grep -v -q gerrit /etc/passwd && useradd gerrit
+prepare: $(CONFIGS)
 	mkdir -p $(OUT)
-	mkdir -p $(BUILD_ROOT)/etc/.
-	cp $(CONFIGS) $(BUILD_ROOT)/etc/.
+	mkdir -p $(SCRIPTS_ROOT)
+	mkdir -p $(BUILD_ROOT)/etc
+	mkdir -p $(BUILD_ROOT)/bin
+	cp $(CONFIGS) $(BUILD_ROOT)/etc
+	-groupadd $(GROUP)
+	-useradd $(USER)
 
 clobber: clean
 	rm -Rf $(BUILD_ROOT)
+	rm -Rf $(SCRIPTS_ROOT)
+	rm -Rf etc/gerritcodereview
 
-$(WAR):
-	curl --create-dirs -o $@  $(URL)
+$(WAR): $(basedir $(WAR))
+	curl -o $@  $(URL)
 
-chown:
-	chown -R $(USER): $(BUILD_ROOT)
+$(SCRIPTS_ROOT)/%.sh: scripts/%.sh
+	echo "#!/bin/bash" > $@
+	echo "USER=$(USER)" >> $@
+	echo "GROUP=$(GROUP)" >> $@
+	echo "GERRIT_SITE=$(GERRIT_SITE)" >> $@
+	cat $< >> $@
 
-$(RPM_OUT): $(WAR) $(CONFIGS) chown
+etc/gerritcodereview: 
+	echo "GERRIT_SITE=$(GERRIT_SITE)" > $@
+
+$(RPM_OUT): $(WAR) $(CONFIGS) $(BUILD_SCRIPTS) chown
 	fpm -t rpm -p $@ $(RPM_OPTS)
 
-$(DEB_OUT): $(WAR) $(CONFIGS) chown
+$(DEB_OUT): $(WAR) $(CONFIGS) $(BUILD_SCRIPTS) chown
 	fpm -t deb -p $@ $(DEB_OPTS)
 
 .PHONY: clean clobber prepare chown
