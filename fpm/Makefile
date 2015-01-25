@@ -20,7 +20,7 @@ WAR=$(BUILD_ROOT)/bin/gerrit.war
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
-CONFIGS=$(wildcard etc/*) etc/gerritcodereview
+CONFIGS=$(wildcard etc/*) 
 SCRIPTS=$(foreach script,$(wildcard scripts/*),$(notdir $(script)))
 BUILD_SCRIPTS=$(foreach script,$(SCRIPTS),$(SCRIPTS_ROOT)/$(script))
 
@@ -51,12 +51,12 @@ prepare: $(CONFIGS)
 	mkdir -p $(BUILD_ROOT)/bin
 	cp $(CONFIGS) $(BUILD_ROOT)/etc
 	-groupadd $(GROUP)
-	-useradd $(USER)
+	$(eval GROUP_ID := $(shell /usr/bin/getent group $(GROUP) | cut -d ':' -f 3))
+	-useradd -g $(GROUP_ID) $(USER)
 
 clobber: clean
 	rm -Rf $(BUILD_ROOT)
 	rm -Rf $(SCRIPTS_ROOT)
-	rm -Rf etc/gerritcodereview
 
 $(WAR): $(basedir $(WAR))
 	curl -o $@  $(URL)
@@ -67,9 +67,6 @@ $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
 	echo "GROUP=$(GROUP)" >> $@
 	echo "GERRIT_SITE=$(GERRIT_SITE)" >> $@
 	cat $< >> $@
-
-etc/gerritcodereview: 
-	echo "GERRIT_SITE=$(GERRIT_SITE)" > $@
 
 $(RPM_OUT): $(WAR) $(CONFIGS) $(BUILD_SCRIPTS) chown
 	fpm -t rpm -p $@ $(RPM_OPTS)
