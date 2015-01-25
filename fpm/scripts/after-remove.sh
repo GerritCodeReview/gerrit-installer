@@ -1,5 +1,8 @@
-rm -f /etc/init.d/gerrit || true
-rm -f /var/log/gerrit || true
-rm -f /etc/gerrit || true
-rm /etc/default/gerritcodereview || true
-userdel $USER || true
+if [ "$1" != "1" ] # Don't execute during upgrade
+then
+  echo "after-remove"
+  rm -f /etc/init.d/gerrit || true
+  rm -f /var/log/gerrit || true
+  rm -f /etc/gerrit || true
+  rm /etc/default/gerritcodereview || true
+fi
