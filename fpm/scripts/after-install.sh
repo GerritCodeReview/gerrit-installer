@@ -11,15 +11,16 @@ $SUDO java -jar $GERRIT_SITE/bin/gerrit.war init --batch -d $GERRIT_SITE >>$LOG 
 [ $? != 0 ] && echo "FAILED" && exit 1
 echo "DONE"
 
-echo -n "Reindexing Gerrit ... "
+echo -n "Reindexing Gerrit .......... "
 $SUDO java -jar $GERRIT_SITE/bin/gerrit.war reindex -d $GERRIT_SITE >> $LOG 2>>$LOG
 [ $? != 0 ] && echo "FAILED" && exit 2
 echo "DONE"
 
-echo -n "Setting user/group ownership ..."
+echo -n "Setting user/group owner .. "
 chown -R $USER:$GROUP $GERRIT_SITE
+echo "DONE"
 
-echo -n "Creating symlinks ... "
+echo -n "Creating symlinks ......... "
 cd /etc/init.d && ln -sf $GERRIT_SITE/bin/gerrit.sh gerrit
 cd /var/log && ln -sf $GERRIT_SITE/logs gerrit
 cd /etc && ln -sf $GERRIT_SITE/etc gerrit
