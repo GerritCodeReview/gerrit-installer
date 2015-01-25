@@ -1,5 +1,9 @@
 SUDO="sudo -u $USER"
 LOG=/tmp/gerrit-installer.log
+chmod a+rw $LOG
+
+[ ! -d /etc/default ] && mkdir -p /etc/default
+echo "GERRIT_SITE=$GERRIT_SITE" > /etc/default/gerritcodereview
 
 echo ""
 echo -n "Initialising Gerrit site ... "
@@ -19,8 +23,6 @@ echo -n "Creating symlinks ... "
 cd /etc/init.d && ln -sf $GERRIT_SITE/bin/gerrit.sh gerrit
 cd /var/log && ln -sf $GERRIT_SITE/logs gerrit
 cd /etc && ln -sf $GERRIT_SITE/etc gerrit
-[ ! -d /etc/default ] && mkdir -p /etc/default
-cd /etc/default && ln -sf /etc/gerrit/gerritcodereview
 echo "DONE"
 
 echo ""
