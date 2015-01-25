@@ -1,9 +1,10 @@
 LOG=/tmp/gerrit-installer.log
+chmod a+rw $LOG
 
 GROUP_ID=$(/usr/bin/getent group $GROUP | cut -d ':' -f 3 2>> $LOG || true)
 if [ "$GROUP_ID" == "" ]
 then
-  echo -n "Creating $GROUP group ... " 
+  echo -n "Creating $GROUP group ... "
   groupadd $GROUP >> $LOG 2>> $LOG
   [ $? != 0 ] && echo "FAILED" && exit 1
   GROUP_ID=$(/usr/bin/getent group $GROUP | cut -d ':' -f 3 2>> $LOG || true)
@@ -13,7 +14,7 @@ fi
 USER_PASSWD=$(/usr/bin/getent passwd $USER 2>> $LOG || true)
 if [ "$USER_PASSWD" == "" ]
 then
-  echo -n "Creating $USER user ... " 
+  echo -n "Creating $USER user ... "
   useradd $USER -M -g $GROUP_ID -d $GERRIT_SITE >> $LOG 2>> $LOG
   [ $? != 0 ] && echo "FAILED" && exit 1
   echo "DONE"
