@@ -14,6 +14,7 @@ GROUP=gerrit
 GERRIT_SITE=/var/gerrit
 
 LICENSE=Apache 2.0
+VENDOR=
 WEB_URL=https://code.google.com/p/gerrit/
 
 WAR=$(BUILD_ROOT)/bin/gerrit.war
@@ -26,7 +27,7 @@ BUILD_SCRIPTS=$(foreach script,$(SCRIPTS),$(SCRIPTS_ROOT)/$(script))
 
 FPM_OPTS=-s dir \
 	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) -a $(BUILD_ARCH) \
-	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" \
+	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" --vendor "$(VENDOR)" \
 	--depends git \
 	--PKG-user $(USER) --PKG-group $(GROUP) \
 	--before-install $(SCRIPTS_ROOT)/before-install.sh \
