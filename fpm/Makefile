@@ -44,6 +44,10 @@ DEB_OPTS=$(subst PKG,deb,$(FPM_OPTS))
 
 all: prepare $(RPM_OUT) $(DEB_OUT)
 
+rpm: $(RPM_OUT)
+
+deb: $(DEB_OUT)
+
 clean:
 	rm -Rf $(OUT)
 
@@ -57,11 +61,15 @@ prepare: $(CONFIGS)
 	$(eval GROUP_ID := $(shell /usr/bin/getent group $(GROUP) | cut -d ':' -f 3))
 	-useradd -g $(GROUP_ID) $(USER)
 
-install: $(RPM_OUT) $(DEB_OUT)
+install-rpm: $(RPM_OUT) 
 	-mkdir -p $(YUM_INSTALL)
-	-mkdir -p $(DEB_INSTALL)
 	cp $(RPM_OUT) $(YUM_INSTALL)
+
+install-deb: $(DEB_OUT)
+	-mkdir -p $(DEB_INSTALL)
 	cp $(DEB_OUT) $(DEB_INSTALL)
+
+install: install-rpm install-deb
 
 clobber: clean
 	rm -Rf $(BUILD_ROOT)
@@ -83,4 +91,4 @@ $(RPM_OUT): $(WAR) $(CONFIGS) $(BUILD_SCRIPTS) chown
 $(DEB_OUT): $(WAR) $(CONFIGS) $(BUILD_SCRIPTS) chown
 	fpm -t deb -p $@ $(DEB_OPTS)
 
-.PHONY: clean clobber prepare chown
+.PHONY: clean clobber prepare chown rpm deb install install-deb install-rpm
