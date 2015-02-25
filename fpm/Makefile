@@ -20,6 +20,8 @@ WAR=$(BUILD_ROOT)/bin/gerrit.war
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
+YUM_INSTALL=../yum-repo/server
+DEB_INSTALL=../deb-repo/server/dists/gerrit/contrib/binary-i386
 CONFIGS=$(wildcard etc/*)
 SCRIPTS=$(foreach script,$(wildcard scripts/*),$(notdir $(script)))
 BUILD_SCRIPTS=$(foreach script,$(SCRIPTS),$(SCRIPTS_ROOT)/$(script))
@@ -53,6 +55,12 @@ prepare: $(CONFIGS)
 	-groupadd $(GROUP)
 	$(eval GROUP_ID := $(shell /usr/bin/getent group $(GROUP) | cut -d ':' -f 3))
 	-useradd -g $(GROUP_ID) $(USER)
+
+install: $(RPM_OUT) $(DEB_OUT)
+	-mkdir -p $(YUM_INSTALL)
+	-mkdir -p $(DEB_INSTALL)
+	cp $(RPM_OUT) $(YUM_INSTALL)
+	cp $(DEB_OUT) $(DEB_INSTALL)
 
 clobber: clean
 	rm -Rf $(BUILD_ROOT)
