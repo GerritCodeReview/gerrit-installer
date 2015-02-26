@@ -1,0 +1,57 @@
+# Customise the following variable as Make parameters
+# to produce a yum.repo for a VENDOR distribution
+# Default values are pointing to GerritForge (www.gerritforge.com)
+VERSION=1
+RELEASE=1
+VENDOR=GerritForge
+VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
+
+# End of the variables that can be customized
+
+define DOCKERFILE
+FROM centos:7.0.1406
+MAINTAINER $(VENDOR)
+
+# Allow remote connectivity and sudo
+RUN yum -y install openssh-client initscripts sudo
+
+# Add Gerrit packages repository
+ADD docker_files /tmp
+RUN rpm -i /tmp/$(VENDOR_LC)*rpm
+
+# Install OpenJDK and Gerrit in two subsequent transactions
+# (pre-trans Gerrit script needs to have access to the Java command)
+RUN yum -y install java-1.7.0-openjdk 
+RUN yum -y install gerrit
+
+USER gerrit
+RUN java -jar /var/gerrit/bin/gerrit.war init --batch -d /var/gerrit
+RUN java -jar /var/gerrit/bin/gerrit.war reindex -d /var/gerrit
+
+# Allow incoming traffic
+EXPOSE 29418 8080
+
+# Start Gerrit
+CMD /var/gerrit/bin/gerrit.sh start && tail -f /var/gerrit/logs/error_log
+endef
+export DOCKERFILE
+
+image: prepare
+	echo "$$DOCKERFILE" > Dockerfile
+	-mkdir -p docker_files
+	cp ../../yum-repo/client/*rpm docker_files/.
+	docker build -t gerrit .
+
+clean:
+	-rm -Rf docker_files
+	-rm Dockerfile
+
+prepare:
+	echo "$$DOCKERFILE" > Dockerfile
+	-mkdir -p docker_files
+	cp ../../yum-repo/client/*rpm docker_files/.
+
+run: image
+	docker run -d -p 8080:8080 -p 29418:29418 gerrit
+
+.PHONY: clean prepare image
