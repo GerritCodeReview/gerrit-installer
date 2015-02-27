@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2517118d_2555ae96",
+        "filename": "docker/centos7/Makefile",
+        "patchSetId": 6
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2015-02-27T08:09:41Z",
+      "side": 1,
+      "message": "nit: trailing space",
+      "range": {
+        "startLine": 24,
+        "startChar": 37,
+        "endLine": 24,
+        "endChar": 38
+      },
+      "revId": "d3ffd13dccf6a4ff02061fe8ea08e996f6cd996b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
