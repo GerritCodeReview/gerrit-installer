@@ -1,6 +1,6 @@
 VERSION=2.10
 URL=http://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
-RELEASE=1
+RELEASE=2
 
 NAME=gerrit
 CATEGORY=Development
@@ -25,7 +25,7 @@ SCRIPTS=$(foreach script,$(wildcard scripts/*),$(notdir $(script)))
 BUILD_SCRIPTS=$(foreach script,$(SCRIPTS),$(SCRIPTS_ROOT)/$(script))
 
 FPM_OPTS=-s dir \
-	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) \
+	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) -a $(BUILD_ARCH) \
 	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" \
 	--depends git \
 	--PKG-user $(USER) --PKG-group $(GROUP) \
