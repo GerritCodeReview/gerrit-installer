@@ -1,8 +1,10 @@
 # Customise the following variable as Make parameters
 # to produce a yum.repo for a VENDOR distribution
 # Default values are pointing to GerritForge (www.gerritforge.com)
-VERSION=1
+VERSION=2.11
 RELEASE=1
+REPO_VERSION=1
+REPO_RELEASE=1
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
 IMAGE=$(VENDOR_LC)/gerrit-centos7
@@ -17,12 +19,12 @@ MAINTAINER $(VENDOR)
 RUN yum -y install openssh-client initscripts sudo
 
 # Add Gerrit packages repository
-RUN rpm -i https://$(VENDOR_LC).com/$(VENDOR_LC)-repo-$(VERSION)-$(RELEASE).noarch.rpm
+RUN rpm -i https://$(VENDOR_LC).com/$(VENDOR_LC)-repo-$(REPO_VERSION)-$(REPO_RELEASE).noarch.rpm
 
 # Install OpenJDK and Gerrit in two subsequent transactions
 # (pre-trans Gerrit script needs to have access to the Java command)
 RUN yum -y install java-1.7.0-openjdk
-RUN yum -y install gerrit
+RUN yum -y install gerrit-$(VERSION)-$(RELEASE)
 
 USER gerrit
 RUN java -jar /var/gerrit/bin/gerrit.war init --batch -d /var/gerrit
@@ -38,7 +40,7 @@ export DOCKERFILE
 
 image: prepare
 	echo "$$DOCKERFILE" > Dockerfile
-	docker build -t $(IMAGE) .
+	docker build -t $(IMAGE):$(VERSION) .
 
 clean:
 	-rm -Rf docker_files
@@ -50,6 +52,6 @@ prepare:
 	cp ../../yum-repo/client/*rpm docker_files/.
 
 run: image
-	docker run -d -p 8080:8080 -p 29418:29418 $(IMAGE)
+	docker run -d -p 8080:8080 -p 29418:29418 $(IMAGE):$(VERSION)
 
 .PHONY: clean prepare image
