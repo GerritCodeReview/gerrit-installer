@@ -8,6 +8,7 @@ REPO_RELEASE=2
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
 IMAGE=$(VENDOR_LC)/gerrit-centos7
+NO_CACHE=true
 
 # End of the variables that can be customized
 
@@ -40,7 +41,7 @@ export DOCKERFILE
 
 image: prepare
 	echo "$$DOCKERFILE" > Dockerfile
-	docker build -t $(IMAGE):$(VERSION) .
+	docker build --no-cache=$(NO_CACHE) -t $(IMAGE):$(VERSION) .
 
 clean:
 	-rm Dockerfile
