@@ -56,7 +56,11 @@ $(RPM_OUT): $(SRCS) prepare
 server:
 	echo "%_signature gpg" > ~/.rpmmacros
 	echo "%_gpg_name  $(PGP_USER)" >> ~/.rpmmacros
+	echo '%__gpg_sign_cmd %{__gpg} \
+ gpg --force-v3-sigs --digest-algo=sha1 --batch --no-verbose --no-armor \
+ --passphrase-fd 3 --no-secmem-warning -u "%{_gpg_name}" \
+ -sbo %{__signature_filename} %{__plaintext_filename}' >>  ~/.rpmmacros
 	rpm --addsign server/*rpm
-	createrepo server/.
+	createrepo --checksum sha server/.
 
 .PHONY: clean prepare server
