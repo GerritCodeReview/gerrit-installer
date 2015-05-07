@@ -4,7 +4,7 @@
 VERSION=2.11
 RELEASE=1
 REPO_VERSION=1
-REPO_RELEASE=1
+REPO_RELEASE=2
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
 IMAGE=$(VENDOR_LC)/gerrit-centos7
