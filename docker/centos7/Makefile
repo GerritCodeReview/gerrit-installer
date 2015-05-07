@@ -43,13 +43,10 @@ image: prepare
 	docker build -t $(IMAGE):$(VERSION) .
 
 clean:
-	-rm -Rf docker_files
 	-rm Dockerfile
 
 prepare:
 	echo "$$DOCKERFILE" > Dockerfile
-	-mkdir -p docker_files
-	cp ../../yum-repo/client/*rpm docker_files/.
 
 run: image
 	docker run -d -p 8080:8080 -p 29418:29418 $(IMAGE):$(VERSION)
