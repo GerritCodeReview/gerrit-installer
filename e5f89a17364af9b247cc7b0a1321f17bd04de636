@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "d91c6c21_76d5102d",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1020467
+      },
+      "writtenOn": "2015-06-13T16:04:55Z",
+      "side": 1,
+      "message": "test",
+      "revId": "e5f89a17364af9b247cc7b0a1321f17bd04de636",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
