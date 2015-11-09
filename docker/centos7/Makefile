@@ -34,6 +34,9 @@ RUN java -jar /var/gerrit/bin/gerrit.war reindex -d /var/gerrit
 # Allow incoming traffic
 EXPOSE 29418 8080
 
+# Allows to externalize the configuration, DB, repos and indexes
+VOLUME ["/var/gerrit/etc","/var/gerrit/git","/var/gerrit/db","/var/gerrit/index"]
+
 # Start Gerrit
 CMD /var/gerrit/bin/gerrit.sh start && tail -f /var/gerrit/logs/error_log
 endef
