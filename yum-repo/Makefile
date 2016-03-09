@@ -2,7 +2,7 @@
 # to produce a yum.repo for a VENDOR distribution
 # Default values are pointing to GerritForge (www.gerritforge.com)
 VERSION=1
-RELEASE=2
+RELEASE=3
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
 WEB_URL=http://$(VENDOR_LC).com
@@ -33,23 +33,20 @@ RPM_OUT=client/$(VENDOR_LC)-repo-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 
 all: client server
 
-client: $(RPM_OUT) 
+client: $(RPM_OUT)
 
 prepare:
-	-mkdir -p client etc/yum.repos.d etc/pki/rpm-gpg scripts server
+	-mkdir -p client etc/yum.repos.d etc/pki/rpm-gpg server
 	echo "$$YUM_REPO" > etc/yum.repos.d/$(VENDOR).repo
 	gpg --yes --armor --output etc/pki/rpm-gpg/RPM-GPG-KEY-$(VENDOR) --export $(PGP_USER)
-	echo "rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-$(VENDOR)" > scripts/after-install.sh
 
 clean:
-	-rm -Rf client etc scripts server
+	-rm -Rf client etc server
 
 $(RPM_OUT): $(SRCS) prepare
 	fpm -t rpm -p $@ -s dir \
 	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) \
 	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" --vendor "$(VENDOR)" \
-	--depends yum \
-	--after-install scripts/after-install.sh \
 	--rpm-user root --rpm-group root \
 	--verbose etc
 
