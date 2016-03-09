@@ -2,7 +2,7 @@
 # to produce a yum.repo for a VENDOR distribution
 # Default values are pointing to GerritForge (www.gerritforge.com)
 VERSION=1
-RELEASE=2
+RELEASE=3
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
 WEB_URL=http://$(VENDOR_LC).com
@@ -48,7 +48,6 @@ $(RPM_OUT): $(SRCS) prepare
 	fpm -t rpm -p $@ -s dir \
 	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) \
 	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" --vendor "$(VENDOR)" \
-	--depends yum \
 	--after-install scripts/after-install.sh \
 	--rpm-user root --rpm-group root \
 	--verbose etc
