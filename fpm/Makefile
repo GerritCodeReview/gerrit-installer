@@ -1,5 +1,6 @@
 VERSION=2.13.2
 URL=http://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
+CI_URL=https://gerrit-ci.gerritforge.com/
 RELEASE=1
 
 NAME=gerrit
@@ -18,6 +19,10 @@ VENDOR=
 WEB_URL=https://code.google.com/p/gerrit/
 
 WAR=$(BUILD_ROOT)/bin/gerrit.war
+PLUGINS=plugin-manager
+PLUGINS_JARS=$(foreach PLUGIN,$(PLUGINS),$(PLUGIN).jar)
+PLUGINS_PATHS=$(foreach PLUGIN_JAR,$(PLUGINS_JARS),$(BUILD_ROOT)/plugins/$(PLUGIN_JAR))
+BRANCH=master
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
@@ -56,6 +61,7 @@ prepare: $(CONFIGS)
 	mkdir -p $(SCRIPTS_ROOT)
 	mkdir -p $(BUILD_ROOT)/etc
 	mkdir -p $(BUILD_ROOT)/bin
+	mkdir -p $(BUILD_ROOT)/plugins
 	cp $(CONFIGS) $(BUILD_ROOT)/etc
 	-groupadd $(GROUP)
 	$(eval GROUP_ID := $(shell /usr/bin/getent group $(GROUP) | cut -d ':' -f 3))
@@ -78,6 +84,9 @@ clobber: clean
 $(WAR): $(basedir $(WAR))
 	curl -o $@  $(URL)
 
+$(BUILD_ROOT)/plugins/%.jar:
+	PLUGIN_NAME=`basename $@` && curl -o $@ $(CI_URL)/job/plugin-$$PLUGIN_NAME-$(BRANCH)/lastSuccessfulBuild/artifact/buck-out/gen/plugins/$$PLUGIN_NAME/$$PLUGIN_NAME.jar
+
 $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
 	echo "#!/bin/bash" > $@
 	echo "USER=$(USER)" >> $@
@@ -85,10 +94,10 @@ $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
 	echo "GERRIT_SITE=$(GERRIT_SITE)" >> $@
 	cat $< >> $@
 
-$(RPM_OUT): $(WAR) $(CONFIGS) $(BUILD_SCRIPTS) chown
+$(RPM_OUT): $(WAR) $(PLUGINS_PATHS) $(CONFIGS) $(BUILD_SCRIPTS) chown
 	fpm -t rpm -p $@ $(RPM_OPTS)
 
-$(DEB_OUT): $(WAR) $(CONFIGS) $(BUILD_SCRIPTS) chown
+$(DEB_OUT): $(WAR) $(PLUGINS_PATHS) $(CONFIGS) $(BUILD_SCRIPTS) chown
 	fpm -t deb -p $@ $(DEB_OPTS)
 
 .PHONY: clean clobber prepare chown rpm deb install install-deb install-rpm
