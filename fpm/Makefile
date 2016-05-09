@@ -1,5 +1,6 @@
 VERSION=2.11.4
 URL=http://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
+CI_URL=https://gerrit-ci.gerritforge.com/
 RELEASE=1
 
 NAME=gerrit
@@ -18,6 +19,7 @@ VENDOR=
 WEB_URL=https://code.google.com/p/gerrit/
 
 WAR=$(BUILD_ROOT)/bin/gerrit.war
+PLUGINS=$(BUILD_ROOT)/bin/plugin-manager.jar
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
@@ -77,6 +79,10 @@ clobber: clean
 
 $(WAR): $(basedir $(WAR))
 	curl -o $@  $(URL)
+
+$(PLUGIN): $(basedir $(PLUGIN))
+        PLUGIN_NAME=$(basedir $(PLUGIN) .jar)
+	curl -o $@ $(CI_URL)/job/plugin-$(PLUGIN_NAME)-$(BRANCH)/lastSuccessfulBuild/artifact/buck-out/gen/plugins/$(PLUGIN_NAME)/$(PLUGIN)
 
 $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
 	echo "#!/bin/bash" > $@
