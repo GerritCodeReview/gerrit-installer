@@ -26,8 +26,10 @@ cd /var/log && ln -sf $GERRIT_SITE/logs gerrit
 cd /etc && ln -sf $GERRIT_SITE/etc gerrit
 echo "DONE"
 
+PORT=$(git config -f /etc/gerrit/gerrit.config httpd.listenUrl | sed -nr 's|.*:([0-9]+).*|\1|p')
+[ -z "$PORT" ] && PORT=8080
 echo ""
 echo "Installation completed"
 echo ""
 echo "To start Gerrit server, run: /etc/init.d/gerrit start"
-echo "To start using Gerrit, open: http://$(hostname):8080/"
+echo "To start using Gerrit, open: http://$(hostname):$PORT/"
