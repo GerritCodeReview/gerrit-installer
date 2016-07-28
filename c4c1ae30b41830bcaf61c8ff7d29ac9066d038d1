@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2f06519f_c8d06ffe",
+        "filename": "fpm/scripts/after-install.sh",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-07-28T12:20:17Z",
+      "side": 1,
+      "message": "you need to add () || true otherwise the script would fail.\nOr simply use a tradifional if()",
+      "revId": "c4c1ae30b41830bcaf61c8ff7d29ac9066d038d1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
