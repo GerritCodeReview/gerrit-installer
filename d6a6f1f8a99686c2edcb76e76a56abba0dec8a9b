@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0f0b4daa_47b8eec2",
+        "filename": "fpm/scripts/after-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2016-07-28T09:51:42Z",
+      "side": 1,
+      "message": "Why not reading then the canonical URL from Gerrit config and show that value? Even the protocol (http vs. https) could be incorrect :-(",
+      "revId": "d6a6f1f8a99686c2edcb76e76a56abba0dec8a9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
