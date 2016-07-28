@@ -1,5 +1,5 @@
 LOG=/tmp/gerrit-installer.log
-chmod a+rw $LOG
+[ -f $LOG ] && chmod a+rw $LOG
 
 GROUP_ID=$(/usr/bin/getent group $GROUP | cut -d ':' -f 3 2>> $LOG || true)
 if [ "$GROUP_ID" == "" ]
