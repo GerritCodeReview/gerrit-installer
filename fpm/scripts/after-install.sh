@@ -30,4 +30,6 @@ echo ""
 echo "Installation completed"
 echo ""
 echo "To start Gerrit server, run: /etc/init.d/gerrit start"
-echo "To start using Gerrit, open: http://$(hostname):8080/"
+
+URL=$(git config -f /etc/gerrit/gerrit.config gerrit.canonicalWebUrl)
+[ -n "$URL" ] && echo "To start using Gerrit, open: $URL"
