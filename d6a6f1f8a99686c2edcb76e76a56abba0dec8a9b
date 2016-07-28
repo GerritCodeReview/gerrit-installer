@@ -16,6 +16,24 @@
       "revId": "d6a6f1f8a99686c2edcb76e76a56abba0dec8a9b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2f06519f_88a5d79d",
+        "filename": "fpm/scripts/after-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 1015513
+      },
+      "writtenOn": "2016-07-28T09:55:31Z",
+      "side": 1,
+      "message": "I was just thinking about the same. Setting canonicalWebUrl seems optional, but so is setting listenUrl. Anyway, the installer seems to set both. It\u0027s just that in case of updates with customizations to gerrit.config this might fail if canonicalWebUrl has been removed. Still, I agree using canonicalWebUrl makes more sense, probably not printing that line at all if canonicalWebUrl is not set. Agreed?",
+      "parentUuid": "0f0b4daa_47b8eec2",
+      "revId": "d6a6f1f8a99686c2edcb76e76a56abba0dec8a9b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
