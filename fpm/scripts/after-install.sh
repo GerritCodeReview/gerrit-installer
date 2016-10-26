@@ -7,7 +7,7 @@ echo "GERRIT_SITE=$GERRIT_SITE" > /etc/default/gerritcodereview
 
 echo ""
 echo -n "Initialising Gerrit site ... "
-$SUDO java -jar $GERRIT_SITE/bin/gerrit.war init --batch -d $GERRIT_SITE >>$LOG 2>>$LOG
+$SUDO java -jar $GERRIT_SITE/bin/gerrit.war init --batch --install-all-plugins -d $GERRIT_SITE >>$LOG 2>>$LOG
 [ $? != 0 ] && echo "FAILED" && exit 1
 echo "DONE"
 

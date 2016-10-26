@@ -30,7 +30,7 @@ RUN apt-get -y install openjdk-7-jdk
 RUN apt-get -y install gerrit=$(VERSION)-$(RELEASE)
 
 USER gerrit
-RUN java -jar /var/gerrit/bin/gerrit.war init --batch -d /var/gerrit
+RUN java -jar /var/gerrit/bin/gerrit.war init --batch --install-all-plugins -d /var/gerrit
 RUN java -jar /var/gerrit/bin/gerrit.war reindex -d /var/gerrit
 
 # Allow incoming traffic

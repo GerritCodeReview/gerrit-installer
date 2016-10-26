@@ -28,7 +28,7 @@ RUN yum -y install java-1.7.0-openjdk
 RUN yum -y install gerrit-$(VERSION)-$(RELEASE)
 
 USER gerrit
-RUN java -jar /var/gerrit/bin/gerrit.war init --batch -d /var/gerrit
+RUN java -jar /var/gerrit/bin/gerrit.war init --batch --install-all-plugins -d /var/gerrit
 RUN java -jar /var/gerrit/bin/gerrit.war reindex -d /var/gerrit
 
 # Allow incoming traffic
