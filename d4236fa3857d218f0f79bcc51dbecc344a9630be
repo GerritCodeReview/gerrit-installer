@@ -145,6 +145,23 @@
     },
     {
       "key": {
+        "uuid": "a0dcfd60_a13a6348",
+        "filename": "mac_osx/installer.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-23T23:44:47Z",
+      "side": 1,
+      "message": "Oh thanks.",
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "b1de993e_a3105202",
         "filename": "mac_osx/scripts/gerritcodereview",
         "patchSetId": 3
@@ -168,6 +185,29 @@
     },
     {
       "key": {
+        "uuid": "f8af1424_6fc8b0b3",
+        "filename": "mac_osx/scripts/gerritcodereview",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-23T23:44:47Z",
+      "side": 1,
+      "message": "Oh nope, i did it like this because i copied wikimedia\u0027s debian version. I can change it to gerrit.",
+      "range": {
+        "startLine": 1,
+        "startChar": 22,
+        "endLine": 1,
+        "endChar": 29
+      },
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "7ade6ce4_2f95f570",
         "filename": "mac_osx/scripts/postinstall",
         "patchSetId": 3
@@ -179,6 +219,23 @@
       "writtenOn": "2017-01-23T23:02:08Z",
       "side": 1,
       "message": "Leftover?",
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3ad8eb14_628c516e",
+        "filename": "mac_osx/scripts/postinstall",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-23T23:44:47Z",
+      "side": 1,
+      "message": "Woops yep, sorry, removing it.\n\nThanks.",
       "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
