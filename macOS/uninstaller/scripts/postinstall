@@ -1,0 +1,13 @@
+#!/bin/sh
+
+sudo rm -rf /var/gerrit
+
+sudo rm -rf /var/gerr-temp
+
+sudo rm -rf /Users/gerrit
+
+sudo rm /etc/default/gerritcodereview
+
+sudo dscl . -delete /Users/gerrit
+
+sudo dscl . -delete /Groups/gerrit
