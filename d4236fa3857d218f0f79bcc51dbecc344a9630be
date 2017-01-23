@@ -1,0 +1,187 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fc9f679a_e09e39cb",
+        "filename": "mac_osx/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "Shall we rename the folder to macos?",
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a56e8420_3cb05be3",
+        "filename": "mac_osx/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "macOS",
+      "range": {
+        "startLine": 1,
+        "startChar": 23,
+        "endLine": 1,
+        "endChar": 30
+      },
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "81992bb0_0bef2213",
+        "filename": "mac_osx/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "nit: wrap long lines",
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "398a1e99_f18fdf18",
+        "filename": "mac_osx/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "Why bullet points? Why not a simple paragraph?",
+      "range": {
+        "startLine": 5,
+        "startChar": 0,
+        "endLine": 5,
+        "endChar": 1
+      },
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "557aeab2_76640a29",
+        "filename": "mac_osx/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "As discussed on the mailing list, it\u0027s a big confusing having yet another point of distribution.\n\nWhy not just pointing to Maven?",
+      "range": {
+        "startLine": 5,
+        "startChar": 45,
+        "endLine": 5,
+        "endChar": 101
+      },
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "26a7f76b_2358aed9",
+        "filename": "mac_osx/README.md",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "Use a pre-format style.\n\n```\n  $ chmod a+x installer.sh\n\n  $ chmod a+x uninstaller/uninstaller.sh\n\n  $ chmod a+x scripts/*\n\n  $ chmod a+x uninstaller/scripts/*\n\n  $ ./installer.sh\n```",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 17,
+        "endChar": 17
+      },
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "9f04afcc_7090b470",
+        "filename": "mac_osx/installer.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "Why not expressing this as a Makefile?\nLook at how we do for the other packages.\n\nAdditionally, you can get the version from a Makefile variable and thus give the ability to create packages for multiple versions.\n\ne.g.\n\nmake VERSION\u003d2.12.5",
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "b1de993e_a3105202",
+        "filename": "mac_osx/scripts/gerritcodereview",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "In all the other packages we create the $GERRIT_SITE under /var/gerrit and use the \"gerrit\" user. Is there any reason for changing it?",
+      "range": {
+        "startLine": 1,
+        "startChar": 22,
+        "endLine": 1,
+        "endChar": 29
+      },
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7ade6ce4_2f95f570",
+        "filename": "mac_osx/scripts/postinstall",
+        "patchSetId": 3
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-01-23T23:02:08Z",
+      "side": 1,
+      "message": "Leftover?",
+      "revId": "d4236fa3857d218f0f79bcc51dbecc344a9630be",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
