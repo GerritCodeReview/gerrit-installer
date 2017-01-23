@@ -1,0 +1,33 @@
+#!/bin/sh
+
+sudo dscl . create /Users/gerrit2
+
+sudo dscl . create /Users/gerrit2 UserShell /bin/bash
+
+sudo dscl . create /Users/gerrit2 RealName "gerrit"
+
+sudo dscl . create /Users/gerrit2 UniqueID 503
+
+sudo dscl . create /Users/gerrit2 PrimaryGroupID 1000
+
+sudo dscl . create /Users/gerrit2 NFSHomeDirectory /Users/gerrit2
+
+sudo dseditgroup -o create -r "Gerrit" gerrit2
+
+# sudo dseditgroup -o edit -a gerrit2 -t user gerrit2
+
+sudo dscl . -append /Groups/gerrit2 GroupMembership gerrit2
+
+sudo cp ./gerritcodereview /etc/default/gerritcodereview
+
+sudo createhomedir -c 2>&1 | grep -v "shell-init"
+
+sudo chown -R gerrit2:gerrit2 /Users/gerrit2
+
+sudo chown -R gerrit2:gerrit2 /etc/default/gerritcodereview
+
+if [ -d /var/lib/gerrit2 ]
+then
+  sudo chown -R gerrit2:gerrit2 /var/lib/gerrit2
+  sudo chmod 755 /var/lib/gerrit2
+fi
