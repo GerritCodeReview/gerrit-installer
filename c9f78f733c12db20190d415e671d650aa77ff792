@@ -22,6 +22,29 @@
       "revId": "c9f78f733c12db20190d415e671d650aa77ff792",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4246b202_15c0b5d5",
+        "filename": "macOS/uninstaller/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-01-24T07:22:34Z",
+      "side": 1,
+      "message": "Oh, I found that it failed if you have two folders called gerrit and gerrit-temp\n\n(Note that I found this problem when building another installer for other software)\n\nLocally macs are getting a new file system this year so that may improve something and allow us to do gerrit-temp.",
+      "range": {
+        "startLine": 7,
+        "startChar": 120,
+        "endLine": 7,
+        "endChar": 124
+      },
+      "revId": "c9f78f733c12db20190d415e671d650aa77ff792",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
