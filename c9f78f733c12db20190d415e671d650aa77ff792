@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4b9794e8_6d32485d",
+        "filename": "macOS/uninstaller/Makefile",
+        "patchSetId": 9
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-01-24T04:53:54Z",
+      "side": 1,
+      "message": "why not \u0027gerrit\u0027?",
+      "range": {
+        "startLine": 7,
+        "startChar": 120,
+        "endLine": 7,
+        "endChar": 124
+      },
+      "revId": "c9f78f733c12db20190d415e671d650aa77ff792",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
+    }
+  ]
+}
