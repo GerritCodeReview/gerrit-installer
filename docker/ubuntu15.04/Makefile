@@ -42,7 +42,6 @@ endef
 export DOCKERFILE
 
 image: prepare
-	echo "$$DOCKERFILE" > Dockerfile
 	docker build --no-cache=$(NO_CACHE) -t $(IMAGE):$(VERSION) .
 
 clean:
@@ -56,4 +55,4 @@ prepare:
 run: image
 	docker run -d -p 8080:8080 -p 29418:29418 $(IMAGE):$(VERSION)
 
-.PHONY: clean prepare image
+.PHONY: clean image
