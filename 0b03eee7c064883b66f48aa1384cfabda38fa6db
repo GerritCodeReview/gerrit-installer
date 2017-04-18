@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "f58dbf3d_e7557fad",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-18T08:02:03Z",
+      "side": 1,
+      "message": "2.14?",
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9085c238_24d8419e",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-18T08:02:03Z",
+      "side": 1,
+      "message": "true? I believe it was false by default, otherwise it will redownload everything all the time.",
+      "range": {
+        "startLine": 10,
+        "startChar": 9,
+        "endLine": 10,
+        "endChar": 13
+      },
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "57d0334b_77b24e16",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-18T08:02:03Z",
+      "side": 1,
+      "message": "I believe JDK 7 isn\u0027t needed anymore for Gerrit 2.14",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 36
+      },
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "edbb987d_a321ad98",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-18T08:02:03Z",
+      "side": 1,
+      "message": "Install *ALL* plugins? Really?",
+      "range": {
+        "startLine": 34,
+        "startChar": 54,
+        "endLine": 34,
+        "endChar": 75
+      },
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "08e1d711_3ef65537",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-04-18T08:02:03Z",
+      "side": 1,
+      "message": "Not needed anymore at first initial run.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 63
+      },
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
