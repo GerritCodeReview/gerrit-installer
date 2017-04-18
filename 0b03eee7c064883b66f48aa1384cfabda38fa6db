@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "e2ce5300_f8b52521",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-04-18T12:13:35Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "f58dbf3d_e7557fad",
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "9085c238_24d8419e",
         "filename": "docker/ubuntu16.04/Makefile",
         "patchSetId": 2
@@ -30,6 +48,30 @@
       "writtenOn": "2017-04-18T08:02:03Z",
       "side": 1,
       "message": "true? I believe it was false by default, otherwise it will redownload everything all the time.",
+      "range": {
+        "startLine": 10,
+        "startChar": 9,
+        "endLine": 10,
+        "endChar": 13
+      },
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8cb55ed0_ff290daa",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-04-18T12:13:35Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "9085c238_24d8419e",
       "range": {
         "startLine": 10,
         "startChar": 9,
@@ -65,6 +107,30 @@
     },
     {
       "key": {
+        "uuid": "667ac9d4_873d9b91",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-04-18T12:13:35Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "57d0334b_77b24e16",
+      "range": {
+        "startLine": 29,
+        "startChar": 0,
+        "endLine": 29,
+        "endChar": 36
+      },
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "edbb987d_a321ad98",
         "filename": "docker/ubuntu16.04/Makefile",
         "patchSetId": 2
@@ -88,6 +154,30 @@
     },
     {
       "key": {
+        "uuid": "49bd2095_f0dc49a0",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-04-18T12:13:35Z",
+      "side": 1,
+      "message": "Oh if I removed this would the plugins that are the default still be installed?\n\nalso thanks, done.",
+      "parentUuid": "edbb987d_a321ad98",
+      "range": {
+        "startLine": 34,
+        "startChar": 54,
+        "endLine": 34,
+        "endChar": 75
+      },
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "08e1d711_3ef65537",
         "filename": "docker/ubuntu16.04/Makefile",
         "patchSetId": 2
@@ -99,6 +189,30 @@
       "writtenOn": "2017-04-18T08:02:03Z",
       "side": 1,
       "message": "Not needed anymore at first initial run.",
+      "range": {
+        "startLine": 35,
+        "startChar": 0,
+        "endLine": 35,
+        "endChar": 63
+      },
+      "revId": "0b03eee7c064883b66f48aa1384cfabda38fa6db",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "93350726_15ab9d3f",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1029953
+      },
+      "writtenOn": "2017-04-18T12:13:35Z",
+      "side": 1,
+      "message": "Oh so we doint need to reindex before starting gerrit now?\n\nAlso thanks, done.",
+      "parentUuid": "08e1d711_3ef65537",
       "range": {
         "startLine": 35,
         "startChar": 0,
