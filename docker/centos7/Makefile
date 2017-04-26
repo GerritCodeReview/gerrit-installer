@@ -13,7 +13,7 @@ NO_CACHE=true
 # End of the variables that can be customized
 
 define DOCKERFILE
-FROM centos:7.2.1511
+FROM centos:7.3.1611
 MAINTAINER $(VENDOR)
 
 # Allow remote connectivity and sudo
