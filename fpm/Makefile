@@ -1,5 +1,5 @@
-VERSION=2.13.7
-URL=http://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
+VERSION=2.13.8
+URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com/
 RELEASE=1
 
@@ -16,7 +16,7 @@ GERRIT_SITE=/var/gerrit
 
 LICENSE=Apache 2.0
 VENDOR=
-WEB_URL=https://code.google.com/p/gerrit/
+WEB_URL=https://www.gerritcodereview.com/
 
 WAR=$(BUILD_ROOT)/bin/gerrit.war
 PLUGINS=plugin-manager
