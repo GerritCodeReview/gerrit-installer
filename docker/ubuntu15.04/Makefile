@@ -1,7 +1,7 @@
 # Customise the following variable as Make parameters
 # to produce a yum.repo for a VENDOR distribution
 # Default values are pointing to GerritForge (www.gerritforge.com)
-VERSION=2.13.8
+VERSION=2.14.0
 RELEASE=1
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
@@ -26,7 +26,7 @@ RUN apt-get -y install openssh-client sudo
 
 # Install OpenJDK and Gerrit in two subsequent transactions
 # (pre-trans Gerrit script needs to have access to the Java command)
-RUN apt-get -y install openjdk-7-jdk
+RUN apt-get -y install openjdk-8-jdk
 RUN apt-get -y install gerrit=$(VERSION)-$(RELEASE)
 
 USER gerrit

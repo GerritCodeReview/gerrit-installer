@@ -1,7 +1,7 @@
 # Customise the following variable as Make parameters
 # to produce a yum.repo for a VENDOR distribution
 # Default values are pointing to GerritForge (www.gerritforge.com)
-VERSION=2.13.8
+VERSION=2.14.0
 RELEASE=1
 REPO_VERSION=1
 REPO_RELEASE=2
@@ -24,7 +24,7 @@ RUN rpm -i https://$(VENDOR_LC).com/$(VENDOR_LC)-repo-$(REPO_VERSION)-$(REPO_REL
 
 # Install OpenJDK and Gerrit in two subsequent transactions
 # (pre-trans Gerrit script needs to have access to the Java command)
-RUN yum -y install java-1.7.0-openjdk
+RUN yum -y install java-1.8.0-openjdk
 RUN yum -y install gerrit-$(VERSION)-$(RELEASE)
 
 USER gerrit
