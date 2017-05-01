@@ -1,6 +1,6 @@
-VERSION=2.13.8
+VERSION=2.14
 URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
-CI_URL=https://gerrit-ci.gerritforge.com/
+CI_URL=https://gerrit-ci.gerritforge.com
 RELEASE=1
 
 NAME=gerrit
@@ -22,7 +22,7 @@ WAR=$(BUILD_ROOT)/bin/gerrit.war
 PLUGINS=plugin-manager
 PLUGINS_JARS=$(foreach PLUGIN,$(PLUGINS),$(PLUGIN).jar)
 PLUGINS_PATHS=$(foreach PLUGIN_JAR,$(PLUGINS_JARS),$(BUILD_ROOT)/plugins/$(PLUGIN_JAR))
-BRANCH=master
+BRANCH=stable-2.14
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
@@ -85,7 +85,7 @@ $(WAR): $(basedir $(WAR))
 	curl -o $@  $(URL)
 
 $(BUILD_ROOT)/plugins/%.jar:
-	PLUGIN_NAME=`basename $@` && curl -o $@ $(CI_URL)/job/plugin-$$PLUGIN_NAME-$(BRANCH)/lastSuccessfulBuild/artifact/buck-out/gen/plugins/$$PLUGIN_NAME/$$PLUGIN_NAME.jar
+	PLUGIN_NAME=`basename $@ .jar` && curl -o $@ $(CI_URL)/job/plugin-$$PLUGIN_NAME-bazel-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/$$PLUGIN_NAME/$$PLUGIN_NAME.jar
 
 $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
 	echo "#!/bin/bash" > $@
