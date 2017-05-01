@@ -8,5 +8,5 @@ it installs in /var/gerrit/.
 ```
   $ chmod a+x scripts/*
   $ chmod a+x uninstaller/scripts/*
-  $ make VERSION=2.13.7
+  $ make
 ```
