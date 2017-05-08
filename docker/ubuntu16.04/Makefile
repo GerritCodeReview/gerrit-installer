@@ -5,14 +5,14 @@ VERSION=2.14
 RELEASE=1
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
-IMAGE=$(VENDOR_LC)/gerrit-ubuntu15.04
+IMAGE=$(VENDOR_LC)/gerrit-ubuntu16.04
 PGP_KEY_ID=1871F775
 NO_CACHE=true
 
 # End of the variables that can be customized
 
 define DOCKERFILE
-FROM ubuntu:15.04
+FROM ubuntu:16.04
 MAINTAINER $(VENDOR)
 
 # Add Gerrit packages repository
@@ -27,11 +27,10 @@ RUN apt-get -y install openssh-client sudo
 # Install OpenJDK and Gerrit in two subsequent transactions
 # (pre-trans Gerrit script needs to have access to the Java command)
 RUN apt-get -y install openjdk-8-jdk
-RUN apt-get -y install gerrit=$(VERSION)-$(RELEASE)
+RUN apt-get -y install gerrit=$(VERSION)-$(RELEASE) && rm -f /var/gerrit/logs/*
 
 USER gerrit
 RUN java -jar /var/gerrit/bin/gerrit.war init --batch --install-all-plugins -d /var/gerrit
-RUN java -jar /var/gerrit/bin/gerrit.war reindex -d /var/gerrit
 
 # Allow incoming traffic
 EXPOSE 29418 8080
