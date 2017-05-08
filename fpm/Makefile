@@ -15,14 +15,19 @@ GROUP=gerrit
 GERRIT_SITE=/var/gerrit
 
 LICENSE=Apache 2.0
-VENDOR=
+VENDOR=GerritForge
 WEB_URL=https://www.gerritcodereview.com/
 
 WAR=$(BUILD_ROOT)/bin/gerrit.war
-PLUGINS=plugin-manager
-PLUGINS_JARS=$(foreach PLUGIN,$(PLUGINS),$(PLUGIN).jar)
-PLUGINS_PATHS=$(foreach PLUGIN_JAR,$(PLUGINS_JARS),$(BUILD_ROOT)/plugins/$(PLUGIN_JAR))
-BRANCH=stable-2.14
+PLUGINS_CI=https://gerrit-ci.gerritforge.com/job
+LIBS_JOBS= \
+  plugin-out-of-the-box-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/out-of-the-box/out-of-the-box.jar
+PLUGINS_JOBS= \
+  plugin-plugin-manager-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/plugin-manager/plugin-manager.jar \
+  plugin-avatars-gravatar-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/avatars-gravatar/avatars-gravatar.jar \
+  plugin-gitiles-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/gitiles/gitiles.jar \
+  plugin-delete-project-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/delete-project/delete-project.jar \
+  plugin-uploadvalidator-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
@@ -62,7 +67,8 @@ prepare: $(CONFIGS)
 	mkdir -p $(BUILD_ROOT)/etc
 	mkdir -p $(BUILD_ROOT)/bin
 	mkdir -p $(BUILD_ROOT)/plugins
-	cp $(CONFIGS) $(BUILD_ROOT)/etc
+	mkdir -p $(BUILD_ROOT)/lib
+	cp -R $(CONFIGS) $(BUILD_ROOT)/etc
 	-groupadd $(GROUP)
 	$(eval GROUP_ID := $(shell /usr/bin/getent group $(GROUP) | cut -d ':' -f 3))
 	-useradd -g $(GROUP_ID) $(USER)
@@ -84,8 +90,15 @@ clobber: clean
 $(WAR): $(basedir $(WAR))
 	curl -o $@  $(URL)
 
-$(BUILD_ROOT)/plugins/%.jar:
-	PLUGIN_NAME=`basename $@ .jar` && curl -o $@ $(CI_URL)/job/plugin-$$PLUGIN_NAME-bazel-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/$$PLUGIN_NAME/$$PLUGIN_NAME.jar
+plugins:
+	for job in $(PLUGINS_JOBS); \
+          do curl -o $(BUILD_ROOT)/plugins/`basename $$job` $(PLUGINS_CI)/$$job; \
+        done
+
+libs:
+	for job in $(LIBS_JOBS); \
+          do curl -o $(BUILD_ROOT)/lib/`basename $$job` $(PLUGINS_CI)/$$job; \
+        done
 
 $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
 	echo "#!/bin/bash" > $@
@@ -94,10 +107,10 @@ $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
 	echo "GERRIT_SITE=$(GERRIT_SITE)" >> $@
 	cat $< >> $@
 
-$(RPM_OUT): $(WAR) $(PLUGINS_PATHS) $(CONFIGS) $(BUILD_SCRIPTS) chown
+$(RPM_OUT): $(WAR) plugins libs $(CONFIGS) $(BUILD_SCRIPTS) chown
 	fpm -t rpm -p $@ $(RPM_OPTS)
 
-$(DEB_OUT): $(WAR) $(PLUGINS_PATHS) $(CONFIGS) $(BUILD_SCRIPTS) chown
+$(DEB_OUT): $(WAR) plugins libs $(PLUGINS_PATHS) $(CONFIGS) $(BUILD_SCRIPTS) chown
 	fpm -t deb -p $@ $(DEB_OPTS)
 
-.PHONY: clean clobber prepare chown rpm deb install install-deb install-rpm
+.PHONY: clean clobber prepare chown rpm deb install install-deb install-rpm plugins libs
