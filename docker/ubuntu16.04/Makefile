@@ -36,7 +36,7 @@ RUN java -jar /var/gerrit/bin/gerrit.war init --batch --install-all-plugins -d /
 EXPOSE 29418 8080
 
 # Start Gerrit
-CMD /var/gerrit/bin/gerrit.sh start && tail -f /var/gerrit/logs/error_log
+CMD git config -f /var/gerrit/etc/gerrit.config gerrit.canonicalWebUrl http://$$HOSTNAME:8080/ && /var/gerrit/bin/gerrit.sh start && tail -f /var/gerrit/logs/error_log
 endef
 export DOCKERFILE
 
@@ -53,6 +53,6 @@ prepare:
 	-mkdir -p docker_files
 
 run: image
-	docker run -d -p 8080:8080 -p 29418:29418 $(IMAGE):$(VERSION)
+	docker run -d --hostname $$HOSTNAME -p 8080:8080 -p 29418:29418 $(IMAGE):$(VERSION)
 
 .PHONY: clean prepare image
