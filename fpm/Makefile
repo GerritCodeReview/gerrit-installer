@@ -1,4 +1,4 @@
-VERSION=2.14
+VERSION=2.14.1
 URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
 RELEASE=1
@@ -25,8 +25,8 @@ LIBS_JOBS= \
 PLUGINS_JOBS= \
   plugin-plugin-manager-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/plugin-manager/plugin-manager.jar \
   plugin-avatars-gravatar-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/avatars-gravatar/avatars-gravatar.jar \
-  plugin-gitiles-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/gitiles/gitiles.jar \
-  plugin-delete-project-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/delete-project/delete-project.jar \
+  plugin-gitiles-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/gitiles/gitiles.jar \
+  plugin-delete-project-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/delete-project/delete-project.jar \
   plugin-uploadvalidator-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
