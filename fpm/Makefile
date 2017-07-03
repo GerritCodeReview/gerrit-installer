@@ -1,4 +1,4 @@
-VERSION=2.13.8
+VERSION=2.13.9
 URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com/
 RELEASE=1
@@ -19,7 +19,7 @@ VENDOR=
 WEB_URL=https://www.gerritcodereview.com/
 
 WAR=$(BUILD_ROOT)/bin/gerrit.war
-PLUGINS=plugin-manager
+PLUGINS=
 PLUGINS_JARS=$(foreach PLUGIN,$(PLUGINS),$(PLUGIN).jar)
 PLUGINS_PATHS=$(foreach PLUGIN_JAR,$(PLUGINS_JARS),$(BUILD_ROOT)/plugins/$(PLUGIN_JAR))
 BRANCH=master
