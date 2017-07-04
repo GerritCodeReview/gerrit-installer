@@ -22,6 +22,30 @@
       "revId": "2e6c32aba1711cca8f31371dbca27d6879ccd8ab",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "90e551a2_dd37c356",
+        "filename": "fpm/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-07-04T05:41:39Z",
+      "side": 0,
+      "message": "plugin-manager hasn\u0027t been released for 2.13.x.",
+      "parentUuid": "8e6b62a3_0fa3808d",
+      "range": {
+        "startLine": 22,
+        "startChar": 0,
+        "endLine": 22,
+        "endChar": 22
+      },
+      "revId": "2e6c32aba1711cca8f31371dbca27d6879ccd8ab",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
