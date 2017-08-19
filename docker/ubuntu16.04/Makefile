@@ -35,6 +35,8 @@ RUN java -jar /var/gerrit/bin/gerrit.war init --batch --install-all-plugins -d /
 # Allow incoming traffic
 EXPOSE 29418 8080
 
+VOLUME ["/var/gerrit/git", "/var/gerrit/index", "/var/gerrit/cache", "/var/gerrit/db", "/var/gerrit/etc"]
+
 # Start Gerrit
 CMD git config -f /var/gerrit/etc/gerrit.config gerrit.canonicalWebUrl http://$$HOSTNAME:8080/ && /var/gerrit/bin/gerrit.sh start && tail -f /var/gerrit/logs/error_log
 endef
