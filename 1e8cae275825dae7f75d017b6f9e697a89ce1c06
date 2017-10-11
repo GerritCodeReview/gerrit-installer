@@ -22,6 +22,30 @@
       "revId": "1e8cae275825dae7f75d017b6f9e697a89ce1c06",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5bfefb2b_8945f694",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2017-10-11T00:28:53Z",
+      "side": 0,
+      "message": "I think this was removed because the version suffix 2.15.rc1 differs from the release file name which is 2.15-rc1 with hyphen rather than dot.\n\nI added a comment elsewhere to ask why the version is different.",
+      "parentUuid": "e29b295d_9b959a57",
+      "range": {
+        "startLine": 2,
+        "startChar": 58,
+        "endLine": 2,
+        "endChar": 68
+      },
+      "revId": "1e8cae275825dae7f75d017b6f9e697a89ce1c06",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
