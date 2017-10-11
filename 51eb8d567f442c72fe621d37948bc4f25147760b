@@ -22,6 +22,30 @@
       "revId": "51eb8d567f442c72fe621d37948bc4f25147760b",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6c745787_59021ec6",
+        "filename": "docker/centos7/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2017-10-11T05:43:14Z",
+      "side": 1,
+      "message": "You can’t use the - in the version number otherwise the package manager won’t find it :-(",
+      "parentUuid": "7ef9a722_09614834",
+      "range": {
+        "startLine": 4,
+        "startChar": 12,
+        "endLine": 4,
+        "endChar": 16
+      },
+      "revId": "51eb8d567f442c72fe621d37948bc4f25147760b",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
