@@ -88,16 +88,16 @@ clobber: clean
 	rm -Rf $(SCRIPTS_ROOT)
 
 $(WAR): $(basedir $(WAR))
-	curl -o $@  $(URL)
+	curl -f -o $@  $(URL)
 
 plugins:
 	for job in $(PLUGINS_JOBS); \
-          do curl -o $(BUILD_ROOT)/plugins/`basename $$job` $(PLUGINS_CI)/$$job; \
+          do curl -f -o $(BUILD_ROOT)/plugins/`basename $$job` $(PLUGINS_CI)/$$job; \
         done
 
 libs:
 	for job in $(LIBS_JOBS); \
-          do curl -o $(BUILD_ROOT)/lib/`basename $$job` $(PLUGINS_CI)/$$job; \
+          do curl -f -o $(BUILD_ROOT)/lib/`basename $$job` $(PLUGINS_CI)/$$job; \
         done
 
 $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
