@@ -1,5 +1,5 @@
-VERSION=2.15.rc1
-URL=https://gerrit-releases.storage.googleapis.com/gerrit-2.15-rc1.war
+VERSION=2.15.rc2
+URL=https://gerrit-releases.storage.googleapis.com/gerrit-2.15-rc2.war
 CI_URL=https://gerrit-ci.gerritforge.com
 RELEASE=1
 
@@ -21,13 +21,13 @@ WEB_URL=https://www.gerritcodereview.com/
 WAR=$(BUILD_ROOT)/bin/gerrit.war
 PLUGINS_CI=https://gerrit-ci.gerritforge.com/job
 LIBS_JOBS= \
-  plugin-out-of-the-box-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/out-of-the-box/out-of-the-box.jar
+  plugin-out-of-the-box-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/out-of-the-box/out-of-the-box.jar
 PLUGINS_JOBS= \
-  plugin-plugin-manager-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/plugin-manager/plugin-manager.jar \
-  plugin-avatars-gravatar-bazel-master-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/avatars-gravatar/avatars-gravatar.jar \
-  plugin-gitiles-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/gitiles/gitiles.jar \
-  plugin-delete-project-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/delete-project/delete-project.jar \
-  plugin-uploadvalidator-bazel-stable-2.14/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar
+  plugin-plugin-manager-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/plugin-manager/plugin-manager.jar \
+  plugin-avatars-gravatar-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/avatars-gravatar/avatars-gravatar.jar \
+  plugin-gitiles-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/gitiles/gitiles.jar \
+  plugin-delete-project-bazel-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/delete-project/delete-project.jar \
+  plugin-uploadvalidator-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
