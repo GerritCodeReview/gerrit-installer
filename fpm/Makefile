@@ -82,7 +82,7 @@ clobber: clean
 	rm -Rf $(SCRIPTS_ROOT)
 
 $(WAR): $(basedir $(WAR))
-	curl -o $@  $(URL)
+	curl -k -o $@  $(URL)
 
 $(BUILD_ROOT)/plugins/%.jar:
 	PLUGIN_NAME=`basename $@` && curl -o $@ $(CI_URL)/job/plugin-$$PLUGIN_NAME-$(BRANCH)/lastSuccessfulBuild/artifact/buck-out/gen/plugins/$$PLUGIN_NAME/$$PLUGIN_NAME.jar

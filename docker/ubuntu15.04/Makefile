@@ -20,6 +20,7 @@ RUN echo "deb mirror://mirrorlist.$(VENDOR_LC).com/deb gerrit contrib" > /etc/ap
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $(PGP_KEY_ID)
 
 # Allow remote connectivity and sudo
+RUN sed -i -e 's/archive.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list
 RUN apt-get update
 RUN apt-key update
 RUN apt-get -y install openssh-client sudo
