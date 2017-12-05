@@ -15,6 +15,9 @@ define DOCKERFILE
 FROM ubuntu:15.04
 MAINTAINER $(VENDOR)
 
+# Download Ubuntu from old-releases
+RUN sed -i -e 's/archive/old-releases/g' /etc/apt/sources.list
+
 # Add Gerrit packages repository
 RUN echo "deb mirror://mirrorlist.$(VENDOR_LC).com/deb gerrit contrib" > /etc/apt/sources.list.d/$(VENDOR).list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys $(PGP_KEY_ID)
