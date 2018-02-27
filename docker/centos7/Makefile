@@ -1,7 +1,7 @@
 # Customise the following variable as Make parameters
 # to produce a yum.repo for a VENDOR distribution
 # Default values are pointing to GerritForge (www.gerritforge.com)
-VERSION=2.13.10
+VERSION=2.13.11
 RELEASE=1
 REPO_VERSION=1
 REPO_RELEASE=2
