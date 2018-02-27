@@ -1,4 +1,4 @@
-VERSION=2.11.5
+VERSION=2.11.11
 URL=http://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
 RELEASE=1
 
