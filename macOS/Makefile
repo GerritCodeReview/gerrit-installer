@@ -1,4 +1,4 @@
-VERSION := 2.15.rc2
+VERSION := 2.15
 
 all: server
 

@@ -1,5 +1,5 @@
-VERSION=2.15.rc2
-URL=https://gerrit-releases.storage.googleapis.com/gerrit-2.15-rc2.war
+VERSION=2.15
+URL=https://gerrit-releases.storage.googleapis.com/gerrit-2.15.war
 CI_URL=https://gerrit-ci.gerritforge.com
 RELEASE=1
 
