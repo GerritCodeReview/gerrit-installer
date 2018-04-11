@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c96f9961_7ca0c935",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2018-04-11T06:52:04Z",
+      "side": 1,
+      "message": "$(VERSION)",
+      "range": {
+        "startLine": 2,
+        "startChar": 58,
+        "endLine": 2,
+        "endChar": 64
+      },
+      "revId": "173c412a0e8be603d49d4fc19d34b416e31f1b62",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
