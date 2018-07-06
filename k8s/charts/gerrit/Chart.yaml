@@ -1,0 +1,14 @@
+name: gerrit
+description: A basic Gerrit server
+version: 0.1.0
+kubeVersion: ">=1.2.0"
+keywords:
+  - git
+  - code
+  - review
+home: https://www.gerritcodereview.com
+sources:
+  - https://gerrit.googlesource.com/docker-gerrit
+maintainers:
+  - name: Luca Milanesio
+    email: luca.milanesio@gmail.com
