@@ -1,4 +1,4 @@
-VERSION=2.15.4
+VERSION=2.15.5
 URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
 RELEASE=1
