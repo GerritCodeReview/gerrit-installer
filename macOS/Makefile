@@ -1,4 +1,4 @@
-VERSION := 2.16-rc0
+VERSION := 2.16-rc1
 
 all: server
 
