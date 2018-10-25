@@ -23,11 +23,11 @@ PLUGINS_CI=https://gerrit-ci.gerritforge.com/job
 LIBS_JOBS= \
   plugin-out-of-the-box-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/out-of-the-box/out-of-the-box.jar
 PLUGINS_JOBS= \
-  plugin-plugin-manager-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/plugin-manager/plugin-manager.jar \
+  plugin-plugin-manager-bazel-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/plugin-manager/plugin-manager.jar \
   plugin-avatars-gravatar-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/avatars-gravatar/avatars-gravatar.jar \
   plugin-gitiles-bazel-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/gitiles/gitiles.jar \
   plugin-delete-project-bazel-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/delete-project/delete-project.jar \
-  plugin-uploadvalidator-bazel-master-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar
+  plugin-uploadvalidator-bazel-stable-2.15/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
