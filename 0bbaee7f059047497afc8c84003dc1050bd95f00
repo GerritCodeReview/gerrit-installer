@@ -1,0 +1,215 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ea8284a8_313d472d",
+        "filename": "k8s/charts/gerrit/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "The documentation about creating helm charts, gives some hints about what should be inside the README [1]. IMHO they are quite senisble, e.g. describing all options in the values.yaml. I think this should be added here.\n\n[1] https://docs.helm.sh/developing_charts/#chart-license-readme-and-notes",
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "e55e0b95_351885d4",
+        "filename": "k8s/charts/gerrit/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "typo: authentication",
+      "range": {
+        "startLine": 9,
+        "startChar": 35,
+        "endLine": 9,
+        "endChar": 50
+      },
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "054cf508_13d744dd",
+        "filename": "k8s/charts/gerrit/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "typo: exposed",
+      "range": {
+        "startLine": 13,
+        "startChar": 18,
+        "endLine": 13,
+        "endChar": 25
+      },
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5aa5ac4f_a1fad256",
+        "filename": "k8s/charts/gerrit/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "I couldn\u0027t find the Gerrit-chart in the helm chart github repository [1]. Is it anyway uploaded into the default helm registry?\n\nI would prefer to use the local path from the cloned project here to install the chart, at least until the chart is released in the usual way:\n\n  cd $(git rev-parse --show-toplevel)/k8s/charts\n  helm install ./gerrit\n\nThat way somebody reading this README after cloning the project from Gerrit will be able to build the chart as is in the checked out commit.\n\n[1] https://github.com/helm/charts/tree/master/incubator",
+      "range": {
+        "startLine": 19,
+        "startChar": 45,
+        "endLine": 19,
+        "endChar": 61
+      },
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "ad3b6238_33aaca94",
+        "filename": "k8s/charts/gerrit/README.md",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "Same here. I would prefer using the local chart path.",
+      "range": {
+        "startLine": 20,
+        "startChar": 46,
+        "endLine": 21,
+        "endChar": 24
+      },
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b019b5ca_e783655c",
+        "filename": "k8s/charts/gerrit/templates/deployment.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "With newer K8s versions the current Api version is apps/v1. Currently the chart supports K8s down to 1.2.0, do we want to go so far down (newest version 1.12)? I think we should think about how to handle K8s versions soon.",
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "081b51b3_8fc32a78",
+        "filename": "k8s/charts/gerrit/templates/ingress.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "I didn\u0027t know that you could use variables in helm charts. Nice!\n\nBut I don\u0027t know, whether we would really need them here, since they are used just once in this template and the template strings are readable enough without it IMHO. I think we should keep it as simple as possible for now. Since this is more a question of taste, I won\u0027t insist on that. If we go ahead with extending this chart or creating additional ones, we should maybe think about some style guidelines in general (I am missing that a lot in the official helm chart repository, which is quite messy for some charts).",
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "de848b97_c3b23c1c",
+        "filename": "k8s/charts/gerrit/values.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "Since we usually want to expose access to Gerrit, I think we should make LoadBalancer the default service type, especially since the ingress is deactivated by default. IMHO it is a good practice to define the values.yaml defaults in a way that it is already usable as far as possible without having to change values.",
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "08f77fcf_d2e0a7ae",
+        "filename": "k8s/charts/gerrit/values.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "This is not evaluated in the template and should thus not appear here.",
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1ad9f728_16af5329",
+        "filename": "k8s/charts/gerrit/values.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "This should be a list by default, not a dictionary.",
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "008ea69d_f4e21ce0",
+        "filename": "k8s/charts/gerrit/values.yaml",
+        "patchSetId": 2
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1065256
+      },
+      "writtenOn": "2018-11-06T09:31:35Z",
+      "side": 1,
+      "message": "Also not yet implemented in the template.",
+      "revId": "0bbaee7f059047497afc8c84003dc1050bd95f00",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
