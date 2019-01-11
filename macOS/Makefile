@@ -1,4 +1,4 @@
-VERSION := 2.14.17
+VERSION := 2.14.18
 
 all: server
 
