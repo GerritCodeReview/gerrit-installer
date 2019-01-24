@@ -16,6 +16,24 @@
       "revId": "b78063fa2469a120e5405e90bc7a51f810e1441e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "26b8ace9_02581dcd",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-01-24T17:18:09Z",
+      "side": 0,
+      "message": "Yes, but not in a Bugfix release. Possibly a good idea for Gerrit 3.0",
+      "parentUuid": "ee99f1f2_0eaf9f33",
+      "revId": "b78063fa2469a120e5405e90bc7a51f810e1441e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": false
     }
   ]
 }
