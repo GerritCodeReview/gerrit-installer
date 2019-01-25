@@ -94,12 +94,12 @@ $(WAR): $(basedir $(WAR))
 plugins:
 	for job in $(PLUGINS_JOBS); \
           do echo ">> Download: $$job" && curl -f -o $(BUILD_ROOT)/plugins/`basename $$job` $(PLUGINS_CI)/$$job; \
-        done
+        done || exit 1
 
 libs:
 	for job in $(LIBS_JOBS); \
           do echo ">> Download: $$job" && curl -f -o $(BUILD_ROOT)/lib/`basename $$job` $(PLUGINS_CI)/$$job; \
-        done
+        done || exit 1
 
 $(SCRIPTS_ROOT)/%.sh: scripts/%.sh
 	echo "#!/bin/bash" > $@
