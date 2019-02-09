@@ -9,7 +9,7 @@ WEB_URL=http://$(VENDOR_LC).com
 MIRROR_URL=http://mirrorlist.$(VENDOR_LC).com/deb
 
 # Vendor PGP Key ID (default GerritForge)
-PGP_KEY_ID=1871F775
+PGP_KEY_ID=9911F82E27836B7FAE85090D847005AE619067D5
 ### END OF VARIABLES THAT CAN BE OVERRIDDEN ###
 
 define DEB_RELEASE
@@ -48,7 +48,7 @@ server:
 	cd server && apt-ftparchive packages dists/gerrit/contrib/binary-i386 > dists/gerrit/contrib/binary-i386/Packages
 	cd server && apt-ftparchive packages dists/gerrit/contrib/binary-amd64 > dists/gerrit/contrib/binary-amd64/Packages
 	cd server && apt-ftparchive release dists/gerrit >> Release
-	gpg -abs -o server/Release.gpg server/Release
+	gpg -abs --default-key $(PGP_KEY_ID) -o server/Release.gpg server/Release
 	mv server/Release* server/dists/gerrit/.
 
 .PHONY: clean prepare server
