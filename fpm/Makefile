@@ -26,7 +26,7 @@ LIBS_JOBS= \
 PLUGINS_JOBS= \
   plugin-plugin-manager-bazel-master-stable-3.0/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/plugin-manager/plugin-manager.jar \
   plugin-avatars-gravatar-bazel-master-stable-3.0/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/avatars-gravatar/avatars-gravatar.jar \
-  plugin-uploadvalidator-bazel-stable-3.0/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar
+  plugin-uploadvalidator-bazel-master-stable-3.0/lastSuccessfulBuild/artifact/bazel-genfiles/plugins/uploadvalidator/uploadvalidator.jar
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
