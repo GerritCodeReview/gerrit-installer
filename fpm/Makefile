@@ -67,6 +67,10 @@ prepare: $(CONFIGS)
 	mkdir -p $(BUILD_ROOT)/bin
 	mkdir -p $(BUILD_ROOT)/plugins
 	mkdir -p $(BUILD_ROOT)/lib
+	mkdir -p $(BUILD_ROOT)/cache
+	mkdir -p $(BUILD_ROOT)/db
+	mkdir -p $(BUILD_ROOT)/git
+	mkdir -p $(BUILD_ROOT)/index
 	cp -R $(CONFIGS) $(BUILD_ROOT)/etc
 	-groupadd $(GROUP)
 	$(eval GROUP_ID := $(shell /usr/bin/getent group $(GROUP) | cut -d ':' -f 3))
