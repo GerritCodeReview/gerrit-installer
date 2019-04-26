@@ -25,7 +25,5 @@ echo ""
 echo "Installation completed"
 echo ""
 
-/etc/init.d/gerrit start
-
 URL=$(git config -f /etc/gerrit/gerrit.config gerrit.canonicalWebUrl)
-[ -z "$URL" ] || echo "To start using Gerrit, open: $URL"
+[ -z "$URL" ] || echo "To start using Gerrit, run '/etc/init.d/gerrit start' and open: $URL"
