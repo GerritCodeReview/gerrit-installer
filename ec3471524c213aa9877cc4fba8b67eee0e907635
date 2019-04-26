@@ -22,6 +22,30 @@
       "revId": "ec3471524c213aa9877cc4fba8b67eee0e907635",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "76033c2b_7b4001f5",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2019-04-26T22:34:49Z",
+      "side": 1,
+      "message": "Oh yes: it is actually a misunderstanding that Gerrit 3.0 has *no database at all*.\nThere is still account_patch_reviews.h2.db, that is technically an H2 table.",
+      "parentUuid": "43a508c3_d2367a6f",
+      "range": {
+        "startLine": 71,
+        "startChar": 1,
+        "endLine": 71,
+        "endChar": 26
+      },
+      "revId": "ec3471524c213aa9877cc4fba8b67eee0e907635",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
     }
   ]
 }
