@@ -25,7 +25,7 @@ LIBS_JOBS= \
   plugin-out-of-the-box-bazel-master-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/out-of-the-box/out-of-the-box.jar
 PLUGINS_JOBS= \
   plugin-plugin-manager-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/plugin-manager/plugin-manager.jar \
-  plugin-avatars-gravatar-bazel-master-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/avatars-gravatar/avatars-gravatar.jar \
+  plugin-avatars-gravatar-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/avatars-gravatar/avatars-gravatar.jar \
   plugin-gitiles-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/gitiles/gitiles.jar \
   plugin-delete-project-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/delete-project/delete-project.jar \
   plugin-uploadvalidator-bazel-stable-2.16/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
