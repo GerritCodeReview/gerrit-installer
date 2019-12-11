@@ -1,5 +1,5 @@
-VERSION=3.0.4
-WAR_VERSION=3.0.4
+VERSION=3.0.5
+WAR_VERSION=3.0.5
 URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(WAR_VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
 RELEASE=1
