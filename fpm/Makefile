@@ -25,7 +25,7 @@ LIBS_JOBS= \
   plugin-out-of-the-box-bazel-master-stable-3.0/lastSuccessfulBuild/artifact/bazel-bin/plugins/out-of-the-box/out-of-the-box.jar
 PLUGINS_JOBS= \
   plugin-avatars-gravatar-bazel-master-stable-3.0/lastSuccessfulBuild/artifact/bazel-bin/plugins/avatars-gravatar/avatars-gravatar.jar \
-  plugin-uploadvalidator-bazel-master-stable-3.0/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
+  plugin-uploadvalidator-bazel-stable-3.0/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
