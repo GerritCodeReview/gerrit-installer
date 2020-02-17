@@ -2,7 +2,7 @@ SUDO="sudo -u $USER"
 LOG=/tmp/gerrit-installer.log
 chmod a+rw $LOG
 
-[ ! -d /etc/default ] && mkdir -p /etc/default
+[ -d /etc/default ] || mkdir -p /etc/default
 echo "GERRIT_SITE=$GERRIT_SITE" > /etc/default/gerritcodereview
 
 echo ""
