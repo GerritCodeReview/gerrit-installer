@@ -3,7 +3,7 @@ LOG=/tmp/gerrit-installer.log
 chmod a+rw $LOG
 
 [ -d /etc/default ] || mkdir -p /etc/default
-echo "GERRIT_SITE=$GERRIT_SITE" > /etc/default/gerritcodereview
+[ -f /etc/default/gerritcodereview ] || echo "GERRIT_SITE=$GERRIT_SITE" > /etc/default/gerritcodereview
 
 echo ""
 echo -n "Initialising Gerrit site ... "
