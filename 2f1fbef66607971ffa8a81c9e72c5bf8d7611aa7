@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "82360db3_0d885991",
+        "filename": "docker/centos7/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-03-25T23:28:57Z",
+      "side": 1,
+      "message": "This empty file should not be added.",
+      "revId": "2f1fbef66607971ffa8a81c9e72c5bf8d7611aa7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5257147c_b7df6e84",
+        "filename": "docker/ubuntu16.04/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1011123
+      },
+      "writtenOn": "2020-03-25T23:28:57Z",
+      "side": 1,
+      "message": "This empty file should not be added.",
+      "revId": "2f1fbef66607971ffa8a81c9e72c5bf8d7611aa7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153",
+      "unresolved": true
+    }
+  ]
+}
