@@ -1,4 +1,4 @@
-VERSION := 3.1.4
+VERSION := 3.2.0.rc0
 
 all: server
 
