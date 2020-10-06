@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f0d728e0_483ef450",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1012732
+      },
+      "writtenOn": "2020-10-06T23:41:26Z",
+      "side": 1,
+      "message": "Should this dot be a dash instead? -Just in case. Ok if semantic.",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 14
+      },
+      "revId": "2f0174d64199d101a897a0cd05f0ffed24d2db44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
