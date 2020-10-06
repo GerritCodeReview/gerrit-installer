@@ -22,6 +22,30 @@
       },
       "revId": "2f0174d64199d101a897a0cd05f0ffed24d2db44",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b10ad8ec_b73faaf6",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2020-10-06T23:50:36Z",
+      "side": 1,
+      "message": "\u003e Should this dot be a dash instead? -Just in case. Ok if semantic.\n\nNope, that is put on purpose with a \u0027.\u0027 because the \u0027-\u0027 is considered the separator between the version of the software and the release number of the package.",
+      "parentUuid": "f0d728e0_483ef450",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 14
+      },
+      "revId": "2f0174d64199d101a897a0cd05f0ffed24d2db44",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
