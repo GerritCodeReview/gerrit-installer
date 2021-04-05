@@ -22,6 +22,30 @@
       },
       "revId": "70aa274566ad1f43c0978ce74f4e32c72a9128b2",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f43d8831_88e36607",
+        "filename": "macOS/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-04-05T21:23:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1daf3fe2_f4b392b8",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 14
+      },
+      "revId": "70aa274566ad1f43c0978ce74f4e32c72a9128b2",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
