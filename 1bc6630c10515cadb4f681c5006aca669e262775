@@ -1,6 +1,29 @@
 {
   "comments": [
     {
+      "unresolved": true,
+      "key": {
+        "uuid": "b0f5c40e_9cbe90ee",
+        "filename": "fpm/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-23T20:46:49Z",
+      "side": 1,
+      "message": "According to [1] it should be called 3.5.0~rc0\n\n[1] https://www.debian.org/doc/debian-policy/ch-controlfields.html",
+      "range": {
+        "startLine": 1,
+        "startChar": 8,
+        "endLine": 1,
+        "endChar": 13
+      },
+      "revId": "1bc6630c10515cadb4f681c5006aca669e262775",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
       "unresolved": false,
       "key": {
         "uuid": "a92a914a_5d541428",
@@ -14,6 +37,30 @@
       "writtenOn": "2021-10-23T20:26:07Z",
       "side": 1,
       "message": "This \u0027.\u0027 is creating problems with Ubuntu, as it would consider just \u00270\u0027 as the release number and not \u00270.rc0\u0027.\n\nI need to change it to 0rc0 so that it won\u0027t be broken down in just \u00270\u0027 but it will keep the \u0027rc0\u0027 part.",
+      "range": {
+        "startLine": 5,
+        "startChar": 9,
+        "endLine": 5,
+        "endChar": 10
+      },
+      "revId": "1bc6630c10515cadb4f681c5006aca669e262775",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c99ced4d_35d65d70",
+        "filename": "fpm/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-23T20:46:49Z",
+      "side": 1,
+      "message": "Still isn\u0027t a good solution :-( and doesn\u0027t work on Debian/Ubuntu.",
+      "parentUuid": "a92a914a_5d541428",
       "range": {
         "startLine": 5,
         "startChar": 9,
