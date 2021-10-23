@@ -1,8 +1,8 @@
-VERSION=3.4.1
-WAR_VERSION=3.4.1
+VERSION=3.5.0
+WAR_VERSION=3.5.0-rc0
 URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(WAR_VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
-RELEASE=1
+RELEASE=0.rc0
 
 NAME=gerrit
 CATEGORY=Development
