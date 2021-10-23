@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "81332b93_94325716",
+        "filename": "fpm/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-23T21:43:50Z",
+      "side": 1,
+      "message": "Yes, but [1] won\u0027t work on CentOS/Fedora. Let\u0027s keep 0rc0 then.",
+      "parentUuid": "b0f5c40e_9cbe90ee",
+      "range": {
+        "startLine": 1,
+        "startChar": 8,
+        "endLine": 1,
+        "endChar": 13
+      },
+      "revId": "1bc6630c10515cadb4f681c5006aca669e262775",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "a92a914a_5d541428",
         "filename": "fpm/Makefile",
         "patchSetId": 3
@@ -61,6 +85,30 @@
       "side": 1,
       "message": "Still isn\u0027t a good solution :-( and doesn\u0027t work on Debian/Ubuntu.",
       "parentUuid": "a92a914a_5d541428",
+      "range": {
+        "startLine": 5,
+        "startChar": 9,
+        "endLine": 5,
+        "endChar": 10
+      },
+      "revId": "1bc6630c10515cadb4f681c5006aca669e262775",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5d514503_c4d3ae91",
+        "filename": "fpm/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-23T21:43:50Z",
+      "side": 1,
+      "message": "Actually, 0rc0 works on Debian.",
+      "parentUuid": "c99ced4d_35d65d70",
       "range": {
         "startLine": 5,
         "startChar": 9,
