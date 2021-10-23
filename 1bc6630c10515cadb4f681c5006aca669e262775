@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a92a914a_5d541428",
+        "filename": "fpm/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-23T20:26:07Z",
+      "side": 1,
+      "message": "This \u0027.\u0027 is creating problems with Ubuntu, as it would consider just \u00270\u0027 as the release number and not \u00270.rc0\u0027.\n\nI need to change it to 0rc0 so that it won\u0027t be broken down in just \u00270\u0027 but it will keep the \u0027rc0\u0027 part.",
+      "range": {
+        "startLine": 5,
+        "startChar": 9,
+        "endLine": 5,
+        "endChar": 10
+      },
+      "revId": "1bc6630c10515cadb4f681c5006aca669e262775",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
