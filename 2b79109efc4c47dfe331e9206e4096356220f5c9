@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a94c7a0a_2a1502b7",
+        "filename": "fpm/Makefile",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2021-10-23T19:52:21Z",
+      "side": 1,
+      "message": "The 0.rc0 is put in the release part for allowing the first release of v3.5.0-1 to be. an upgrade of the RCs.",
+      "range": {
+        "startLine": 5,
+        "startChar": 8,
+        "endLine": 5,
+        "endChar": 13
+      },
+      "revId": "2b79109efc4c47dfe331e9206e4096356220f5c9",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
