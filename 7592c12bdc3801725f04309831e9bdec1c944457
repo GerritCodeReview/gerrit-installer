@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a4906d21_a987078e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1130481
+      },
+      "writtenOn": "2021-11-21T01:14:07Z",
+      "side": 1,
+      "message": "潘銘均",
+      "revId": "7592c12bdc3801725f04309831e9bdec1c944457",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
