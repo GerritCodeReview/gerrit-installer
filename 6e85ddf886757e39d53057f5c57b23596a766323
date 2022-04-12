@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b39e429e_6343f47f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1014252
+      },
+      "writtenOn": "2022-04-12T13:18:48Z",
+      "side": 1,
+      "message": "Not too familiar with the gerrit-installer project but FWICT it looks correct.",
+      "revId": "6e85ddf886757e39d53057f5c57b23596a766323",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
