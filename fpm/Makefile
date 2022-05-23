@@ -1,5 +1,5 @@
 VERSION=3.6.0
-WAR_VERSION=3.6.0-rc5
+WAR_VERSION=3.6.0
 BRANCH=stable-3.6
 URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(WAR_VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
@@ -26,7 +26,7 @@ LIBS_JOBS= \
   plugin-out-of-the-box-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/out-of-the-box/out-of-the-box.jar
 PLUGINS_JOBS= \
   plugin-avatars-gravatar-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/avatars-gravatar/avatars-gravatar.jar \
-  plugin-uploadvalidator-bazel-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
+  plugin-uploadvalidator-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
