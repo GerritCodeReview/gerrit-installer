@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "89b6e5c1_63df46d4",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-09-30T23:50:43Z",
+      "side": 1,
+      "message": "We don\u0027t have yet plugins on stable-3.7: we should get the ones from master for now.",
+      "range": {
+        "startLine": 3,
+        "startChar": 7,
+        "endLine": 3,
+        "endChar": 17
+      },
+      "revId": "fe9aa78d332d2383c5e9aa01d043a57c83c724d1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
