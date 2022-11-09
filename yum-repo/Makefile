@@ -45,7 +45,7 @@ clean:
 
 $(RPM_OUT): $(SRCS) prepare
 	fpm -t rpm -p $@ -s dir \
-	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) \
+	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) -a all --rpm-os linux \
 	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" --vendor "$(VENDOR)" \
 	--rpm-user root --rpm-group root \
 	--verbose etc
