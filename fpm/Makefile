@@ -37,7 +37,7 @@ SCRIPTS=$(foreach script,$(wildcard scripts/*),$(notdir $(script)))
 BUILD_SCRIPTS=$(foreach script,$(SCRIPTS),$(SCRIPTS_ROOT)/$(script))
 
 FPM_OPTS=-s dir \
-	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) -a $(BUILD_ARCH) \
+	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) -a all --rpm-os linux \
 	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" --vendor "$(VENDOR)" \
 	--depends git \
 	--PKG-user $(USER) --PKG-group $(GROUP) \
