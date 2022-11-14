@@ -26,6 +26,30 @@
     {
       "unresolved": false,
       "key": {
+        "uuid": "af955971_e2734892",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-14T21:14:09Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fffa3e3c_eec99166",
+      "range": {
+        "startLine": 7,
+        "startChar": 44,
+        "endLine": 7,
+        "endChar": 49
+      },
+      "revId": "f9e8e94d995773102395cfe897c6f5211f188a8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
         "uuid": "51be0195_16181526",
         "filename": "/PATCHSET_LEVEL",
         "patchSetId": 1
@@ -37,6 +61,24 @@
       "writtenOn": "2022-11-14T10:25:18Z",
       "side": 1,
       "message": "Have you tested this E2E with Ubuntu/Almalinux on ARM?",
+      "revId": "f9e8e94d995773102395cfe897c6f5211f188a8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a588e7ba_f8ed6674",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-14T21:14:09Z",
+      "side": 1,
+      "message": "The following tests were performed:\n1. I have created the RPM under the `arm64` architecture and used for the following images creation:\n* https://hub.docker.com/layers/geminicaprograms/gerrit/v3.7.0-rc5-2-g8d43f07-almalinux9/images/sha256-1b84e008333bed25e770338ac2e37a214e2234cb3e5e9c65cfc0317b96d1f6db?context\u003drepo\n* https://hub.docker.com/layers/geminicaprograms/gerrit/v3.7.0-rc5-2-g8d43f07-ubuntu22/images/sha256-d82b8ed77f50e98af5dc10007e74f7290e313025cb1bbd3e9a0889997affe59b?context\u003drepo\n\n  which were called on both `ubuntu22.04` and `osx_m1` successfully (without `--platform` toggle) IOW that proves that RPM created on `arm64` can be called against both `amd64` and `arm64` images and systems.\n\n2. I have created the RPM under the `ubuntu22.04` system and used for the following images creation (note that ubuntu setup requires extra steps as mentioned here https://stackoverflow.com/a/69492910):\n* https://hub.docker.com/layers/geminicaprograms/gerrit/v3.7.0-rc5-3-g88597cd-almalinux8/images/sha256-6bd05f2f3fa056cb44edcd625e24ebf35605e55e8963a7219e98a69dbe5d78b3?context\u003drepo\n* https://hub.docker.com/layers/geminicaprograms/gerrit/v3.7.0-rc5-3-g88597cd-ubuntu20/images/sha256-bc359d3acd8b32b9d3ed1b9d1f69617ca18782afb1ce6869067e7285fc1c9a25?context\u003drepo\n\n  which were called on both `ubuntu22.04` and `osx_m1` successfully IOW that proves that RPM created on `amd64` can be called against both `amd64` and `arm64` images and systems.",
+      "parentUuid": "51be0195_16181526",
       "revId": "f9e8e94d995773102395cfe897c6f5211f188a8e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
