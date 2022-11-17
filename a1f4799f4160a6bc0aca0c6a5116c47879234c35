@@ -16,6 +16,23 @@
       "message": "I have verified that in AWS with the following steps:\n1. created the EC2 image (used Amazon Linux arm64 architecture)\n2. installed docker there and run the arm64 image with\n\n  docker run --rm -ti -p 8080:8080 -p 29418:29418 --name gerrit geminicaprograms/gerrit:v3.7.0-rc5-3-g88597cd-ubuntu20\n\n3. once it was started the running architecture was confirmed with\n\n  $ uname -a\n  Linux cedcd3967abb 5.10.147-133.644.amzn2.aarch64 #1 SMP Fri Oct 14 01:16:25 UTC 2022 aarch64 aarch64 aarch64 GNU/Linux\n\n4. basic sanity checks were performed: repo created, change created, altered and submitted\n\nsteps 2-4 were repeated for the almalinux8 with the following image:\n\n  docker run --rm -ti -p 8080:8080 -p 29418:29418 --name gerrit geminicaprograms/gerrit:v3.7.0-rc5-3-g88597cd-almalinux8\n\nand architecture verification\n\n  $ uname -a\n  Linux 9d49b58636b7 5.10.147-133.644.amzn2.aarch64 #1 SMP Fri Oct 14 01:16:25 UTC 2022 aarch64 aarch64 aarch64 GNU/Linux",
       "revId": "a1f4799f4160a6bc0aca0c6a5116c47879234c35",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f03f81c_a3f3b700",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-17T17:57:23Z",
+      "side": 1,
+      "message": "thanks @syntonyze@gmail.com for the brief introduction of how tests should be performed on AWS 😄",
+      "revId": "a1f4799f4160a6bc0aca0c6a5116c47879234c35",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
