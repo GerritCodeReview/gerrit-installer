@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d5d94699_e3d36f79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2022-11-19T22:22:29Z",
+      "side": 1,
+      "message": "I finally managed to push also ARM64 deb packages and docker containers with this !",
+      "revId": "c9f7fb3924485ace4ac40ad0e0c09355178fecf8",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
