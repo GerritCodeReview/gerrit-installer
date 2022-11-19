@@ -2,7 +2,7 @@
 # to produce a yum.repo for a VENDOR distribution
 # Default values are pointing to GerritForge (www.gerritforge.com)
 VERSION=1
-RELEASE=3
+RELEASE=4
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
 WEB_URL=http://$(VENDOR_LC).com
