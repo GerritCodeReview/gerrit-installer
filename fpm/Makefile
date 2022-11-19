@@ -1,7 +1,7 @@
 VERSION=3.4.8
 WAR_VERSION=3.4.8
 URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(WAR_VERSION).war
-CI_URL=https://gerrit-ci.gerritforge.com
+CI_URL=https://archive-ci.gerritforge.com
 RELEASE=2
 
 NAME=gerrit
@@ -20,7 +20,7 @@ VENDOR=GerritForge
 WEB_URL=https://www.gerritcodereview.com/
 
 WAR=$(BUILD_ROOT)/bin/gerrit.war
-PLUGINS_CI=https://gerrit-ci.gerritforge.com/job
+PLUGINS_CI=https://archive-ci.gerritforge.com/job
 LIBS_JOBS= \
   plugin-out-of-the-box-bazel-master-stable-3.4/lastSuccessfulBuild/artifact/bazel-bin/plugins/out-of-the-box/out-of-the-box.jar
 PLUGINS_JOBS= \
