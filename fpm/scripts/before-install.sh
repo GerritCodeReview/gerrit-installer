@@ -23,11 +23,11 @@ fi
 
 echo -n "Checking Java version ... "
 JAVA_VERSION=$(java -version 2>&1)
-[ $? != 0 ] && echo -e "NOT FOUND\nPlease install Java >= 1.8.0 and try again" && exit 2
+[ $? != 0 ] && echo -e "NOT FOUND\nPlease install Java 11 and try again" && exit 2
 
-VERSION=`expr "$JAVA_VERSION" : '.*"\(1.[0-9\.]*\)["_]'`
+VERSION=`expr "$JAVA_VERSION" : '.*"\(11\..*\)["_]'`
 echo "$VERSION"
-test "$VERSION" "<" "1.8" && echo "ERROR: java >= 1.8.0 required by Gerrit" && exit 3
+test "$VERSION" "<" "11" && echo "ERROR: java >= 11 required by Gerrit" && exit 3
 
 # Script is invoked even before upgrade, we need to stop Gerrit if active
 if [ -e /etc/init.d/gerrit ]
