@@ -5,11 +5,12 @@ VERSION=1
 RELEASE=3
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
+VENDOR_USER=yum
 WEB_URL=http://$(VENDOR_LC).com
 MIRROR_URL=http://mirrorlist.$(VENDOR_LC).com/yum
 
 # Vendor PGP Certificate (default GerritForge)
-PGP_USER=info@$(VENDOR_LC).com
+PGP_USER=$(VENDOR_USER)@$(VENDOR_LC).com
 
 ### END OF VARIABLES THAT CAN BE OVERRIDDEN ###
 
