@@ -105,6 +105,23 @@
       "parentUuid": "51be0195_16181526",
       "revId": "f9e8e94d995773102395cfe897c6f5211f188a8e",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ccea3115_241e39a0",
+        "filename": "yum-repo/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1097529
+      },
+      "writtenOn": "2022-11-20T06:56:32Z",
+      "side": 1,
+      "message": "wew",
+      "revId": "f9e8e94d995773102395cfe897c6f5211f188a8e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
