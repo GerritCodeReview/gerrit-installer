@@ -1,9 +1,8 @@
 VERSION=3.7.0
 WAR_VERSION=3.7.0
 BRANCH=stable-3.7
-URL=https://gerrit-releases.storage.googleapis.com/gerrit-$(WAR_VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
-RELEASE=1
+RELEASE=2
 
 NAME=gerrit
 CATEGORY=Development
@@ -39,7 +38,7 @@ BUILD_SCRIPTS=$(foreach script,$(SCRIPTS),$(SCRIPTS_ROOT)/$(script))
 FPM_OPTS=-s dir \
 	-f -n $(NAME) -v $(VERSION) --iteration $(RELEASE) --category $(CATEGORY) -a all --rpm-os linux \
 	--description "$(SUMMARY)" --url $(WEB_URL) --license "$(LICENSE)" --vendor "$(VENDOR)" \
-	--depends git \
+	--depends git --depends sudo \
 	--PKG-user $(USER) --PKG-group $(GROUP) \
 	--before-install $(SCRIPTS_ROOT)/before-install.sh \
 	--after-install $(SCRIPTS_ROOT)/after-install.sh \

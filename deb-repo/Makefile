@@ -43,10 +43,13 @@ clean:
 server:
 	debsigs --sign=origin -k $(PGP_KEY_ID) server/dists/gerrit/contrib/binary-i386/*.deb
 	-mkdir -p server/dists/gerrit/contrib/binary-amd64
+	-mkdir -p server/dists/gerrit/contrib/binary-arm64
 	cp -f server/dists/gerrit/contrib/binary-i386/*.deb server/dists/gerrit/contrib/binary-amd64
+	cp -f server/dists/gerrit/contrib/binary-i386/*.deb server/dists/gerrit/contrib/binary-arm64
 	echo "$$DEB_RELEASE" >> server/Release
 	cd server && apt-ftparchive packages dists/gerrit/contrib/binary-i386 > dists/gerrit/contrib/binary-i386/Packages
 	cd server && apt-ftparchive packages dists/gerrit/contrib/binary-amd64 > dists/gerrit/contrib/binary-amd64/Packages
+	cd server && apt-ftparchive packages dists/gerrit/contrib/binary-arm64 > dists/gerrit/contrib/binary-arm64/Packages
 	cd server && apt-ftparchive release dists/gerrit >> Release
 	gpg -abs --default-key $(PGP_KEY_ID) -o server/Release.gpg server/Release
 	mv server/Release* server/dists/gerrit/.
