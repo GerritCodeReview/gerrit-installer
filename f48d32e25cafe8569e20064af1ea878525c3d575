@@ -16,6 +16,23 @@
       "message": "Tested E2E. @geminica.programs@gmail.com @thomasmulhall410@yahoo.com would you like to re-check?",
       "revId": "f48d32e25cafe8569e20064af1ea878525c3d575",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4797a96_416018c3",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-21T18:27:20Z",
+      "side": 1,
+      "message": "I have used packages created with that change and they are truly multi-platform :D",
+      "revId": "f48d32e25cafe8569e20064af1ea878525c3d575",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
