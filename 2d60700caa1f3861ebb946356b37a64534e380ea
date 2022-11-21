@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "07cfc67a_d9d84f49",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2022-11-21T18:28:36Z",
+      "side": 1,
+      "message": "I have used packages created with that change and they are truly multi-platform :D",
+      "revId": "2d60700caa1f3861ebb946356b37a64534e380ea",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
