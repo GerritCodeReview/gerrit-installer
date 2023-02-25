@@ -16,6 +16,24 @@
       "message": "Is this expected?",
       "revId": "eca277eddf9fa2656f6e8471e96b84c9083a54d3",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "89eee27b_fe83353c",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-02-25T00:30:19Z",
+      "side": 1,
+      "message": "Yes, we need rewind the release back to `1`",
+      "parentUuid": "454a4145_f2d69a84",
+      "revId": "eca277eddf9fa2656f6e8471e96b84c9083a54d3",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
