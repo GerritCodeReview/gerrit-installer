@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "37322d8b_7a480b50",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-04T23:39:03Z",
+      "side": 1,
+      "message": "Didn\u0027t work as expected.",
+      "revId": "41aaac83b6fddb5926e7a84d37b55956f994ecb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82ca62fb_449302f4",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-04T23:39:03Z",
+      "side": 1,
+      "message": "Not needed",
+      "range": {
+        "startLine": 1,
+        "startChar": 13,
+        "endLine": 1,
+        "endChar": 17
+      },
+      "revId": "41aaac83b6fddb5926e7a84d37b55956f994ecb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "82659653_16ec79ab",
+        "filename": "fpm/Makefile",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-04-04T23:39:03Z",
+      "side": 1,
+      "message": "Looks like this URL isn\u0027t working anymore and returns a 404.\nI had to use `https://storage.googleapis.com/gerrit-releases`",
+      "range": {
+        "startLine": 4,
+        "startChar": 4,
+        "endLine": 4,
+        "endChar": 50
+      },
+      "revId": "41aaac83b6fddb5926e7a84d37b55956f994ecb7",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
