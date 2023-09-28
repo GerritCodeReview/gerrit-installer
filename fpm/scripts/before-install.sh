@@ -1,5 +1,6 @@
 LOG=/tmp/gerrit-installer.log
 [ ! -f $LOG ] || chmod a+rw $LOG
+echo "Using log file $LOG"
 
 GROUP_ID=$(/usr/bin/getent group $GROUP | cut -d ':' -f 3 2>> $LOG || true)
 if [ "$GROUP_ID" == "" ]
@@ -30,15 +31,19 @@ echo "$VERSION"
 test "$VERSION" "<" "11" && echo "ERROR: Java 11 or 17 required by Gerrit" && exit 3
 
 # Script is invoked even before upgrade, we need to stop Gerrit if active
-if [ -e /etc/init.d/gerrit ]
+GERRIT_PID=$(ps -o pid,command -u $USER | grep gerrit | awk '{print $1}')
+if [ "$GERRIT_PID" != "" ]
 then
-  GERRIT_PID=$(ps -o pid,command -u $USER | grep gerrit | awk '{print $1}')
-  if [ "$GERRIT_PID" != "" ]
+  echo -n "Stopping Gerrit (pid=$GERRIT_PID) ... "
+  if [ -e /etc/init.d/gerrit ]
   then
-    echo -n "Stopping Gerrit (pid=$GERRIT_PID) ..."
     /etc/init.d/gerrit stop >> $LOG 2>> $LOG
     [ $? != 0 ] && echo "FAILED" && exit 1
     echo "DONE"
+  else
+    echo "Cannot locate init.d script for Gerrit" | tee -a $LOG
+    echo "Please stop Gerrit (pid=$GERRIT_PID) manually and try the installation again" | tee -a $LOG
+    echo "FAILED" && exit 1
   fi
 fi
 
