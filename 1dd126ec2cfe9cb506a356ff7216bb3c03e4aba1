@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3fe9a888_beb3f53f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1146580
+      },
+      "writtenOn": "2023-10-04T15:08:16Z",
+      "side": 1,
+      "message": "Hi Luca, hi Thomas.\n\ndo you have a few minutes to take a look at this small change?",
+      "revId": "1dd126ec2cfe9cb506a356ff7216bb3c03e4aba1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
