@@ -16,6 +16,24 @@
       "message": "Hi Luca, hi Thomas.\n\ndo you have a few minutes to take a look at this small change?",
       "revId": "1dd126ec2cfe9cb506a356ff7216bb3c03e4aba1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fec221e2_2dd95e44",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-04T16:05:25Z",
+      "side": 1,
+      "message": "I am back from the Gerrit User Summit 2023 but still swamped by the post-summit activities. Will have more time in 1-2 weeks from now.",
+      "parentUuid": "3fe9a888_beb3f53f",
+      "revId": "1dd126ec2cfe9cb506a356ff7216bb3c03e4aba1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
