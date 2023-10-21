@@ -4,6 +4,7 @@ BRANCH=stable-3.9
 URL=https://storage.googleapis.com/gerrit-releases/gerrit-$(WAR_VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
 RELEASE=0rc0
+MIN_JAVA_VERSION=17
 
 NAME=gerrit
 CATEGORY=Development
@@ -49,7 +50,7 @@ FPM_OPTS=-s dir \
 	--verbose -C $(BUILD_ROOT) .
 
 RPM_OPTS=$(subst --before-install,--rpm-pretrans, $(subst PKG,rpm,$(FPM_OPTS)))
-DEB_OPTS=$(subst PKG,deb,$(FPM_OPTS))
+DEB_OPTS=$(subst PKG,deb,--depends 'default-jre-headless (>= 2:1.$(MIN_JAVA_VERSION)) | java$(MIN_JAVA_VERSION)-runtime-headless' $(FPM_OPTS))
 
 all: prepare $(RPM_OUT) $(DEB_OUT)
 
