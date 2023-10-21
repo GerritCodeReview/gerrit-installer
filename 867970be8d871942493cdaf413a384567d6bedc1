@@ -104,6 +104,24 @@
       "parentUuid": "b2a943eb_7078118e",
       "revId": "867970be8d871942493cdaf413a384567d6bedc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2b150be5_f46f4840",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-10-21T12:06:49Z",
+      "side": 1,
+      "message": "btw. we already declare package dependency on `git` and `su`. Don\u0027t know how why the JRE was missed.",
+      "parentUuid": "106a3530_6f23dfd7",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
