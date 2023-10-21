@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c5f33b37_de39dd88",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-10-21T11:26:40Z",
+      "side": 1,
+      "message": "I\u0027ve build and installed DEB package locally and it worked as expected.\n\nThe Java dependencies were taken from gradle DEB file.",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
