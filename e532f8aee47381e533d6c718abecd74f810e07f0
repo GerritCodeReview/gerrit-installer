@@ -39,6 +39,30 @@
       },
       "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a817da31_7bc1ca09",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-10-21T11:29:17Z",
+      "side": 1,
+      "message": "nope, it doesn\u0027t work on Java 22\n\n```shell\n# java --version                                                                                                                                                                                                                           \nopenjdk 22-ea 2024-03-19\nOpenJDK Runtime Environment (build 22-ea+16-Debian-1)\nOpenJDK 64-Bit Server VM (build 22-ea+16-Debian-1, mixed mode, sharing)\n# dpkg -i out/gerrit-3.9.0-0rc0.noarch.deb                                                                                                                                                                                                 \n(Reading database ... 124254 files and directories currently installed.)\nPreparing to unpack .../gerrit-3.9.0-0rc0.noarch.deb ...\nUsing log file /tmp/gerrit-installer.log\nChecking Java version ... \nERROR: Java 17 required by Gerrit\n```",
+      "parentUuid": "6acbaea4_87fb660f",
+      "range": {
+        "startLine": 31,
+        "startChar": 41,
+        "endLine": 31,
+        "endChar": 48
+      },
+      "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
