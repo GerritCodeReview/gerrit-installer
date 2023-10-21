@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b6dc32a_b808049a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-10-21T09:59:49Z",
+      "side": 1,
+      "message": "I have copied the detection lines to eclipse-temurin based JDK 17 image and they detected version properly 😄",
+      "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
