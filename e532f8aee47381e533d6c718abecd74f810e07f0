@@ -16,6 +16,29 @@
       "message": "I have copied the detection lines to eclipse-temurin based JDK 17 image and they detected version properly 😄",
       "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6acbaea4_87fb660f",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-21T10:02:22Z",
+      "side": 1,
+      "message": "Have you checked if other higher versions of Java are also OK?",
+      "range": {
+        "startLine": 31,
+        "startChar": 41,
+        "endLine": 31,
+        "endChar": 48
+      },
+      "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
