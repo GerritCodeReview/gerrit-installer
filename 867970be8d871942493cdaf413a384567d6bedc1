@@ -51,6 +51,24 @@
       "parentUuid": "a7264022_9fb1b0d1",
       "revId": "867970be8d871942493cdaf413a384567d6bedc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "492d403d_bfc97ac8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-10-21T11:39:27Z",
+      "side": 1,
+      "message": "Ubuntu [Lunar and Mantinc](https://packages.ubuntu.com/search?keywords\u003ddefault-jre-headless\u0026searchon\u003dnames\u0026suite\u003dall\u0026section\u003dall) do provide `default-jre-headless` package in version `2:1.17`, so it _should_ work.",
+      "parentUuid": "d4727f15_be3bed0a",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
