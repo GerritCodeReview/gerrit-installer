@@ -86,6 +86,24 @@
       "message": "We should decide on one fix not two of them. Either this or I937a7a4e8560b should be continued",
       "revId": "867970be8d871942493cdaf413a384567d6bedc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "106a3530_6f23dfd7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-10-21T12:00:35Z",
+      "side": 1,
+      "message": "I\u0027d prefer that the package installs all of its required dependencies automatically and not fail during the installation process.\n\nThat\u0027s why dependencies exist in the first place!\n\nDon\u0027t mind having this check in two places, especially since the RPM dependencies are not changed and still installing Gerrit will not drag in JRE.",
+      "parentUuid": "b2a943eb_7078118e",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
