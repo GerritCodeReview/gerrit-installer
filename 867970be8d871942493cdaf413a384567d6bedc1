@@ -16,6 +16,23 @@
       "message": "I\u0027ve build and installed DEB package locally and it worked as expected.\n\nThe Java dependencies were taken from gradle DEB file.",
       "revId": "867970be8d871942493cdaf413a384567d6bedc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a7264022_9fb1b0d1",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-21T11:29:16Z",
+      "side": 1,
+      "message": "Have you also checked on Ubuntu?",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
