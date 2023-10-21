@@ -63,6 +63,30 @@
       },
       "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0bbb2673_16f03ee7",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-10-21T11:32:07Z",
+      "side": 1,
+      "message": "BTW. this error will not stop the install process on Debian.\n\n```shell\n# dpkg -i out/gerrit-3.9.0-0rc0.noarch.deb                                                                                                                                                                                                 \n(Reading database ... 124254 files and directories currently installed.)\nPreparing to unpack .../gerrit-3.9.0-0rc0.noarch.deb ...\nUsing log file /tmp/gerrit-installer.log\nChecking Java version ... \nERROR: Java 17 required by Gerrit\ndpkg: error processing archive out/gerrit-3.9.0-0rc0.noarch.deb (--install):\n new gerrit package pre-installation script subprocess returned error exit status 3\n\nInitialising Gerrit site ... DONE\nSetting user/group owner ... DONE\nCreating symlinks .......... DONE\n\nInstallation completed\n\nTo start using Gerrit, run \u0027/etc/init.d/gerrit start\u0027 and open: https://luksza.org/r/\nErrors were encountered while processing:\n out/gerrit-3.9.0-0rc0.noarch.deb\n```",
+      "parentUuid": "a817da31_7bc1ca09",
+      "range": {
+        "startLine": 31,
+        "startChar": 41,
+        "endLine": 31,
+        "endChar": 48
+      },
+      "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
