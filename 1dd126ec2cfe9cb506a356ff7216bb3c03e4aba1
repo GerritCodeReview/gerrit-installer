@@ -51,6 +51,23 @@
       "message": "Thanks, Luca.",
       "revId": "1dd126ec2cfe9cb506a356ff7216bb3c03e4aba1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ddea0963_9a905a81",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1146580
+      },
+      "writtenOn": "2023-10-21T13:43:29Z",
+      "side": 1,
+      "message": "Do you think a similar change should be made to `before-remove.sh`?",
+      "revId": "1dd126ec2cfe9cb506a356ff7216bb3c03e4aba1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
