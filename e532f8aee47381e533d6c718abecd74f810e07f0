@@ -87,6 +87,30 @@
       },
       "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cc0f993c_2ff8eb8a",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-10-21T11:55:46Z",
+      "side": 1,
+      "message": "@dariusz.luksza@gmail.com\nit does stop installation on ubuntu though 😊\n\n@luca.milanesio@gmail.com\n\u003e Have you checked if other higher versions of Java are also OK?\n\nIt will not work. TBH existing code will not work either but sure I can fix this 😊",
+      "parentUuid": "0bbb2673_16f03ee7",
+      "range": {
+        "startLine": 31,
+        "startChar": 41,
+        "endLine": 31,
+        "endChar": 48
+      },
+      "revId": "e532f8aee47381e533d6c718abecd74f810e07f0",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
