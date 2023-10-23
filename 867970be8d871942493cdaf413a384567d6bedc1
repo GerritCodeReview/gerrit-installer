@@ -122,6 +122,23 @@
       "parentUuid": "106a3530_6f23dfd7",
       "revId": "867970be8d871942493cdaf413a384567d6bedc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "6c83a264_795401b9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1025452
+      },
+      "writtenOn": "2023-10-23T07:07:43Z",
+      "side": 1,
+      "message": "Have you tried running it on `eclipse-temurine` image?",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
