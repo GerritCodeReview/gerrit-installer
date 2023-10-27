@@ -209,6 +209,42 @@
       "parentUuid": "01780e52_dc2bf9a7",
       "revId": "867970be8d871942493cdaf413a384567d6bedc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "46f22acf_19188a41",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-27T21:47:37Z",
+      "side": 1,
+      "message": "\u003e \u003e I am against this move, because of the following reasons:\n\u003e \u003e - We never enforced a specific JVM package as dependency\n\u003e \n\u003e If something wasn\u0027t enforced in the past it doesn\u0027t mean that it can\u0027t be in the future. Arguments like this will block any future improvements.\n\nSure, but that means a breaking change in the packaging.\nWe should then start a packaging with a different name/variance, so that people are then expecting something different.\n\n\u003e \u003e - The JVM could have been already installed in other ways and available: why forcing to be a package at all?\n\u003e \n\u003e The point of packaging systems and dependencies is to give a working environment. All packages that I know of after installing will give you a working system, with a sensible default configuration and up to the point that they will start a daemon if required.\n\nI know, but the JVM is a different beast IMHO. Commercial customers have the JVM provided by their vendor (e.g. Oracle or other) which would provide a specific packaging, different than the open-source one.\n\nLast but not least, there are also customers with custom-JVMs (e.g. SAP, and many others).\n\n\u003e The packaging system is an improvement over _configure \u0026 make_ scripts that would fail and complain about missing a library or other dependencies, forcing you to manually provide those dependencies one after another.\n\nSure, we can explicitly target a Debian version and develop a brand-new packaging for it, explicitly mentioning the open-source version of the JVM package.\nI believe there were discussions also of including Gerrit as standard package in Debian in the past, do you remember?\n\n\u003e \u003e If the Gerrit admin has basic OS skills, he should be able to install a JVM.\n\u003e \n\u003e With the same approach, the admin should also be able to install `git` and `sudo`, but those two are already included as dependencies. This already creates inconsistency.\n\nSure, but \u0027git\u0027 and \u0027sudo\u0027 have one single provider, whilst the JVM can have multiple implementations and providers.\n\n\u003e \u003e If the Gerrit admin does not have basic OS skills, then it is way better for him to use Docker instead.\n\u003e \u003e \n\u003e \u003e Feel free to disagree and explain your benefits with this change.\n\u003e \n\u003e As a linux user, I expect the program to be fully operational after installing its package. Also when upgrading I expect the dependency system to tell me that I need to upgrade other packages upfront and not leave my system in a broken state.\n\nSure, that makes sense as well.\n\n\u003e This is what actually happened on my private Gerrit instance. After upgrading to 3.9-rc0 (using the official apt source) the Gerrit was not starting. The only error I\u0027ve seen was that the init script has failed. After some digging in I\u0027ve discovered that the class file versions are not supported (I doubt that most OS admins will know what that even means). This way I learned that I need up upgrade my JVM.\n\nYes, that was a disappointing experience that we can and must improve.\n\n\u003e Imagine a system that runs multiple services that use JVM eg. Gerrit, Jenkins and Nexus. Installing a new version of Gerrit from DEB package will hide the fact that it also needs a new JVM version. When you learn that after the fact, you either must upgrade all other servers or downgrade the Gerrit version.\n\nThat\u0027s an interesting point: we may also think about a \"Gerrit bundle\" that includes a self-contained JVM. There are customers with issues in upgrading because of the constraints o the JVM with other products on the same box.\n\n\u003e The purpose of the dependency system is to inform admins what\u0027s actually required, prevent colliding versions and prevent breaking the system. This is not the case now for the Gerrit DEB package.\n\nI know, that was a deliberate decision taken many years ago, because of the need of allowing the use of this package in a non-standard setup.\n\n\u003e \u003e P.S. Our Deb packages aren\u0027t just for Debian, but for any distribution that accept a .deb package for installation.\n\u003e \n\u003e It will work with different systems, it may require a system version upgrade, but this is how things work with versioned systems, that you sometimes need to upgrade the whole system in order to use a newer version of a package.\n\nI know, but Gerrit has already so many impediments for upgrading, I would avoid adding others.",
+      "parentUuid": "d1f1c7a7_8dba6c44",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "8d5fcdf9_379213ff",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-10-27T21:47:37Z",
+      "side": 1,
+      "message": "That means we need to park this solution for now :-(",
+      "parentUuid": "87c5c282_2764f8de",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
