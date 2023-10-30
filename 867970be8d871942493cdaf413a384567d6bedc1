@@ -245,6 +245,42 @@
       "parentUuid": "87c5c282_2764f8de",
       "revId": "867970be8d871942493cdaf413a384567d6bedc1",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "69c79926_36721dda",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-10-30T12:23:39Z",
+      "side": 1,
+      "message": "I\u0027d say that the `eclipse-temurin` image do not follow the \"system\" approach and installs JVM \"from source\" instead of providing a DEB package.  From a purist perspective, that would also mean that Geerit should not be installed from DEB, as its dependencies are not met by the packaging system.",
+      "parentUuid": "8d5fcdf9_379213ff",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "7d917003_6c2de768",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-10-30T12:23:39Z",
+      "side": 1,
+      "message": "\u003e Sure, but that means a breaking change in the packaging.\nWe should then start a packaging with a different name/variance, so that people are then expecting something different.\n\nOne can argue that this is a bug in the package dependency, therefore it needs to be fixed ;)\n\nAnyway, this may be an inconvenience for current users, we don\u0027t know how many of them are currently using system-provided JVM.\n\nI\u0027m not sure about the name change, maybe something like `gerrit-no-jvm` could work? We can also look into a version change, as with `default-jre-headless` which uses `2:` as a version prefix.\n\n\u003e I know, but the JVM is a different beast IMHO. Commercial customers have the JVM provided by their vendor (e.g. Oracle or other) which would provide a specific packaging, different than the open-source one.\n\nSure, but if that packaging is done correctly it should inform the packaging system, that the `default-jvm-headless` virtual package is provided by it. If the JVM is installed _manually_ that will not be the case (maybe there\u0027s a way to convince `dpkg` that a package is provided when it\u0027s manually installed).\n\n\u003e I believe there were discussions also of including Gerrit as standard package in Debian in the past, do you remember?\n\nYes, I do recall some discussions about having an official Debian package but don\u0027t remember the exact specifics. Maybe we should start with Ubuntu and a PPA repository?\n\n\u003e Sure, but \u0027git\u0027 and \u0027sudo\u0027 have one single provider, whilst the JVM can have multiple implementations and providers.\n\nThat\u0027s why a virtual `default-jvm-headless` package exists so that different providers can claim that they provide it. This problem is already solved.\n\n\u003e That\u0027s an interesting point: we may also think about a \"Gerrit bundle\" that includes a self-contained JVM. There are customers with issues in upgrading because of the constraints of the JVM with other products on the same box.\n\nI don\u0027t think that\u0027s a correct solution as having multiple JVM\u0027s on a single system may confuse admins. Imagine a situation when a security (or hardware-related) fix must be installed, how then this be performed without releasing a new bundled DEB package? How the admin would know where to install the new JVM version?\n\nFor the \"big instances\" where a dedicated Gerrit (or JVM) admin is assigned to run the service, this won\u0027t be a problem as they would know how to deal with issues like this. But for small or medium sites, where there\u0027s only a general admin or team available, they will rather rely on the packaging system to make their work easier.\n\n\u003e I know, that was a deliberate decision taken many years ago, because of the need of allowing the use of this package in a non-standard setup.\n\nI understand this, and that was one of the reasons why I\u0027ve abandoned this change.",
+      "parentUuid": "46f22acf_19188a41",
+      "revId": "867970be8d871942493cdaf413a384567d6bedc1",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
