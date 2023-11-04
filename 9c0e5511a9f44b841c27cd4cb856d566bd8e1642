@@ -22,6 +22,30 @@
       },
       "revId": "9c0e5511a9f44b841c27cd4cb856d566bd8e1642",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a81bddf9_51a4e54c",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1010134
+      },
+      "writtenOn": "2023-11-04T11:00:07Z",
+      "side": 1,
+      "message": "we don\u0027t know if it work with 99, but for sure the current approach doesn\u0027t work with 22:\n```\nPreparing to unpack .../gerrit_3.9.0-0rc3_all.deb ...\nUsing log file /tmp/gerrit-installer.log\nChecking Java version ... \nERROR: Java 17 required by Gerrit\ndpkg: error processing archive /var/cache/apt/archives/gerrit_3.9.0-0rc3_all.deb (--unpack):\n new gerrit package pre-installation script subprocess returned error exit status 3\n\nInitialising Gerrit site ... DONE\nSetting user/group owner ... DONE\nCreating symlinks .......... DONE\n\nInstallation completed\n\nTo start using Gerrit, run \u0027/etc/init.d/gerrit start\u0027 and open: https://host/r/\nErrors were encountered while processing:\n /var/cache/apt/archives/gerrit_3.9.0-0rc3_all.deb\nE: Sub-process /usr/bin/dpkg returned an error code (1)\n                                                                                                                                                                                                                                              \n # java --version                                                                                                                                                                                                                           \nopenjdk 22-ea 2024-03-19\nOpenJDK Runtime Environment (build 22-ea+22-Debian-1)\nOpenJDK 64-Bit Server VM (build 22-ea+22-Debian-1, mixed mode, sharing)\n\n```",
+      "parentUuid": "20a58631_0fb04ddc",
+      "range": {
+        "startLine": 31,
+        "startChar": 49,
+        "endLine": 31,
+        "endChar": 57
+      },
+      "revId": "9c0e5511a9f44b841c27cd4cb856d566bd8e1642",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
