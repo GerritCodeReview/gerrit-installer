@@ -94,6 +94,30 @@
       },
       "revId": "9c0e5511a9f44b841c27cd4cb856d566bd8e1642",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e0f76ffb_89ba59a8",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-11-11T13:00:15Z",
+      "side": 1,
+      "message": "\u003e The problematic check that fails with JDK 22 is in line `29` so let me work it out as it is a general purpose one and should work with _all_ (I know strong statement 😊) modern JDK versions.\n\nSure, but bear in mind that fixing the script for all modern JDK versions is quick, fixing Gerrit not so quick 😐\n\n\u003e As of line `31` IMHO we should allow everything between `17` and `21` (including) now and once we are confirmed working on newer versions it should be extended. WDYT?\n\nI don\u0027t believe we can confirm that Gerrit works on Java 21, yet. We must start creating a CI job on stable-3.9 maybe?",
+      "parentUuid": "fe19e489_8cf5ade9",
+      "range": {
+        "startLine": 31,
+        "startChar": 49,
+        "endLine": 31,
+        "endChar": 57
+      },
+      "revId": "9c0e5511a9f44b841c27cd4cb856d566bd8e1642",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
