@@ -190,6 +190,30 @@
       },
       "revId": "9c0e5511a9f44b841c27cd4cb856d566bd8e1642",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "ae060cc7_fc7229a6",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-11-19T09:53:40Z",
+      "side": 1,
+      "message": "Have you tried with Java 21? It should fail the check saying that `Java 17 is required by Gerrit`.\n\nI haven\u0027t tried myself but based on L31 it passes the test, which is incorrect IMHO.",
+      "parentUuid": "a42ae0a4_3ba30044",
+      "range": {
+        "startLine": 31,
+        "startChar": 49,
+        "endLine": 31,
+        "endChar": 57
+      },
+      "revId": "9c0e5511a9f44b841c27cd4cb856d566bd8e1642",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }

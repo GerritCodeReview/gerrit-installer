@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "eec19c52_c3353593",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2023-11-19T09:53:40Z",
+      "side": 1,
+      "message": "```suggestion\ntest \"$VERSION\" \"!\u003d\" \"17\" \u0026\u0026 echo \"ERROR: Java 17 is required by Gerrit\" \u0026\u0026 exit 3\n```",
+      "revId": "5dc7a4eac0ba37a6f68b976ac9cbefb0e790c090",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
