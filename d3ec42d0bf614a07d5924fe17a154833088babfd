@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b5ee373_435bd2a0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3250950
+      },
+      "writtenOn": "2024-01-20T17:39:35Z",
+      "side": 1,
+      "message": "https://gerrit.googlesource.com/gerrit-installer",
+      "revId": "d3ec42d0bf614a07d5924fe17a154833088babfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
