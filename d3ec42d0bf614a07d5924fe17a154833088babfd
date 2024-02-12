@@ -16,6 +16,23 @@
       "message": "https://gerrit.googlesource.com/gerrit-installer",
       "revId": "d3ec42d0bf614a07d5924fe17a154833088babfd",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f77dfd5c_4b040065",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 3296944
+      },
+      "writtenOn": "2024-02-12T00:09:59Z",
+      "side": 1,
+      "message": "h",
+      "revId": "d3ec42d0bf614a07d5924fe17a154833088babfd",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ],
   "submitRequirementResults": [
