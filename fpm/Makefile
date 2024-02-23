@@ -24,9 +24,8 @@ WAR=$(BUILD_ROOT)/bin/gerrit.war
 PLUGINS_CI=https://gerrit-ci.gerritforge.com/job
 LIBS_JOBS= \
   plugin-out-of-the-box-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/out-of-the-box/out-of-the-box.jar
-PLUGINS_JOBS= \
-  plugin-avatars-gravatar-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/avatars-gravatar/avatars-gravatar.jar \
-  plugin-uploadvalidator-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
+PLUGINS=avatars-gravatar \
+        uploadvalidator
 
 RPM_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).rpm
 DEB_OUT=$(OUT)/gerrit-$(VERSION)-$(RELEASE).$(BUILD_ARCH).deb
@@ -92,10 +91,13 @@ clobber: clean
 
 $(WAR): $(basedir $(WAR))
 	curl -f -o $@  $(URL)
-
 plugins:
-	for job in $(PLUGINS_JOBS); \
-          do set -e && echo ">> Download: $$job" && curl -f -o $(BUILD_ROOT)/plugins/`basename $$job` $(PLUGINS_CI)/$$job; \
+	@for plugin in $(PLUGINS); \
+          do set -e && echo ">> Download: plugin $$plugin" && \
+             ((echo "   * Trying $(PLUGINS_CI)/plugin-$$plugin-bazel-$(BRANCH) ..." && \
+               curl -f -o $(BUILD_ROOT)/plugins/$$pugin.jar $(PLUGINS_CI)/plugin-$$plugin-bazel-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/$$plugin/$$plugin.jar) || \
+              (echo "   * Trying $(PLUGINS_CI)/plugin-$$plugin-$(BRANCH) ..." && \
+               curl -f -o $(BUILD_ROOT)/plugins/$$pugin.jar $(PLUGINS_CI)/plugin-$$plugin-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/$$plugin/$$plugin.jar)); \
         done
 
 libs:
