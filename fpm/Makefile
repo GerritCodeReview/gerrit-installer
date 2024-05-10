@@ -1,9 +1,9 @@
 VERSION=3.10.0
-WAR_VERSION=3.10.0-rc6
+WAR_VERSION=3.10.0-rc7
 BRANCH=stable-3.10
 URL=https://storage.googleapis.com/gerrit-releases/gerrit-$(WAR_VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
-RELEASE=0rc6
+RELEASE=0rc7
 
 NAME=gerrit
 CATEGORY=Development
