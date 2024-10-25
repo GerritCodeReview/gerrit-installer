@@ -26,7 +26,7 @@ echo -n "Checking Java version ... "
 JAVA_VERSION=$(java -version 2>&1)
 [ $? != 0 ] && echo -e "NOT FOUND\nPlease install Java 17 or later and try again" && exit 2
 
-VERSION=`expr "$JAVA_VERSION" : '.*"\((17|21)\..*\)["_]'`
+VERSION=`expr "$JAVA_VERSION" : '.*"\(\(17\|21\)\..*\)["_]'`
 echo "$VERSION"
 test "$VERSION" "<" "17" && echo "ERROR: Java 17 or later is required by Gerrit" && exit 3
 
