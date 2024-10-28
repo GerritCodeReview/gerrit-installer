@@ -16,9 +16,12 @@ PLUGINS_JOBS= \
   plugin-uploadvalidator-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
 
 TAR_OUT=$(OUT)/gerrit-$(WAR_VERSION).tar.gz
+TAR_OUT_SIG=$(TAR_OUT).asc
+TAR_OUT_SHA256=$(TAR_OUT).sha256
+TAR_OUT_SHA256_SIG=$(TAR_OUT_SHA256).asc
 CONFIGS=$(wildcard etc/*)
 
-all: prepare $(TAR_OUT)
+all: prepare $(TAR_OUT) $(TAR_OUT_SIG) $(TAR_OUT_SHA256) $(TAR_OUT_SHA256_SIG)
 
 clean:
 	rm -Rf $(OUT)
@@ -53,5 +56,11 @@ libs:
 
 $(TAR_OUT): $(WAR) plugins libs $(CONFIGS)
 	tar -C $(BUILD_ROOT) -f $@ -cvz .
+
+%.asc: %
+	GPG_TTY=`tty` gpg --output $@ --armor -b --sign $<
+
+%.sha256: %
+	sha256sum $< > $@
 
 .PHONY: clean clobber prepare plugins libs
