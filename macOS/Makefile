@@ -1,4 +1,4 @@
-VERSION := 3.8.9
+VERSION := 3.8.10
 
 all: server
 
