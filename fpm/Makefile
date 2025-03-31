@@ -1,5 +1,5 @@
-VERSION=3.9.9
-WAR_VERSION=3.9.9
+VERSION=3.9.10
+WAR_VERSION=3.9.10
 BRANCH=stable-3.9
 URL=https://storage.googleapis.com/gerrit-releases/gerrit-$(WAR_VERSION).war
 CI_URL=https://gerrit-ci.gerritforge.com
