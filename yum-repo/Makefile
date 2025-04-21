@@ -2,10 +2,10 @@
 # to produce a yum.repo for a VENDOR distribution
 # Default values are pointing to GerritForge (www.gerritforge.com)
 VERSION=1
-RELEASE=4
+RELEASE=5
 VENDOR=GerritForge
 VENDOR_LC=$(shell echo $(VENDOR) | tr A-Z a-z)
-VENDOR_USER=yum
+VENDOR_USER=gerrit
 WEB_URL=http://$(VENDOR_LC).com
 MIRROR_URL=http://mirrorlist.$(VENDOR_LC).com/yum
 
