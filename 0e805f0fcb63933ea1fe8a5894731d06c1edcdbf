@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "f62ea371_a13e2eb8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4111554
+      },
+      "writtenOn": "2025-06-02T03:52:24Z",
+      "side": 1,
+      "message": "472781: Set Gerrit to 3.9.11 | https://gerrit-review.googlesource.com/c/gerrit-installer/+/472781",
+      "revId": "0e805f0fcb63933ea1fe8a5894731d06c1edcdbf",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
