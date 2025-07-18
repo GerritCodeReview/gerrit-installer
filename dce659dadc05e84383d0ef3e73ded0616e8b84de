@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c404cdb7_344e75c7",
+        "filename": "fpm/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-07-18T21:51:39Z",
+      "side": 1,
+      "message": "Missing `.jar` extension",
+      "range": {
+        "startLine": 102,
+        "startChar": 40,
+        "endLine": 102,
+        "endChar": 45
+      },
+      "revId": "dce659dadc05e84383d0ef3e73ded0616e8b84de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7cbbf10b_808503d8",
+        "filename": "fpm/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-07-18T21:51:39Z",
+      "side": 1,
+      "message": "Missing `.jar` extension",
+      "range": {
+        "startLine": 103,
+        "startChar": 40,
+        "endLine": 103,
+        "endChar": 45
+      },
+      "revId": "dce659dadc05e84383d0ef3e73ded0616e8b84de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
