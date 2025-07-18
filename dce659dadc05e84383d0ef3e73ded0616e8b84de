@@ -45,6 +45,52 @@
       },
       "revId": "dce659dadc05e84383d0ef3e73ded0616e8b84de",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4b595d7b_d645b11d",
+        "filename": "tarball/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-07-18T21:52:11Z",
+      "side": 1,
+      "message": "Missing `.jar` extension",
+      "range": {
+        "startLine": 55,
+        "startChar": 40,
+        "endLine": 55,
+        "endChar": 45
+      },
+      "revId": "dce659dadc05e84383d0ef3e73ded0616e8b84de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "b3dd89e7_2b993789",
+        "filename": "tarball/Makefile",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2025-07-18T21:52:11Z",
+      "side": 1,
+      "message": "Missing `.jar` extension",
+      "range": {
+        "startLine": 56,
+        "startChar": 40,
+        "endLine": 56,
+        "endChar": 45
+      },
+      "revId": "dce659dadc05e84383d0ef3e73ded0616e8b84de",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
