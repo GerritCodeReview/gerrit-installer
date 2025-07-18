@@ -13,7 +13,7 @@ LIBS_JOBS= \
   plugin-out-of-the-box-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/out-of-the-box/out-of-the-box.jar
 PLUGINS_JOBS= \
   plugin-avatars-gravatar-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/avatars-gravatar/avatars-gravatar.jar \
-  plugin-uploadvalidator-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
+  plugin-uploadvalidator-bazel-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
 
 TAR_OUT=$(OUT)/gerrit-$(WAR_VERSION).tar.gz
 TAR_OUT_SIG=$(TAR_OUT).asc
