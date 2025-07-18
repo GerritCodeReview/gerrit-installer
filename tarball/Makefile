@@ -9,11 +9,9 @@ BUILD_ROOT=$(shell pwd)/build
 
 WAR=$(BUILD_ROOT)/bin/gerrit.war
 PLUGINS_CI=https://gerrit-ci.gerritforge.com/job
-LIBS_JOBS= \
-  plugin-out-of-the-box-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/out-of-the-box/out-of-the-box.jar
-PLUGINS_JOBS= \
-  plugin-avatars-gravatar-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/avatars-gravatar/avatars-gravatar.jar \
-  plugin-uploadvalidator-bazel-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/uploadvalidator/uploadvalidator.jar
+LIBS=out-of-the-box
+PLUGINS=avatars-gravatar \
+  uploadvalidator
 
 TAR_OUT=$(OUT)/gerrit-$(WAR_VERSION).tar.gz
 TAR_OUT_SIG=$(TAR_OUT).asc
@@ -45,13 +43,17 @@ $(WAR): $(basedir $(WAR))
 	curl -f -o $@  $(URL)
 
 plugins:
-	for job in $(PLUGINS_JOBS); \
-          do set -e && echo ">> Download: $$job" && curl -f -o $(BUILD_ROOT)/plugins/`basename $$job` $(PLUGINS_CI)/$$job; \
+	for plugin in $(PLUGINS); \
+        do set -e && echo ">> Download: $$job" && \
+          (curl -f -o $(BUILD_ROOT)/plugins/$$plugin.jar $(PLUGINS_CI)/plugin-$$plugin-bazel-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/$$plugin/$$plugin.jar || \
+           curl -f -o $(BUILD_ROOT)/plugins/$$plugin.jar $(PLUGINS_CI)/plugin-$$plugin-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/$$plugin/$$plugin.jar); \
         done
 
 libs:
-	for job in $(LIBS_JOBS); \
-          do set -e && echo ">> Download: $$job" && curl -f -o $(BUILD_ROOT)/lib/`basename $$job` $(PLUGINS_CI)/$$job; \
+	for lib in $(LIBS); \
+          do set -e && echo ">> Download: $$job" && \
+          (curl -f -o $(BUILD_ROOT)/lib/$$lib` $(PLUGINS_CI)/plugin-$$lib-bazel-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/$$lib/$$lib.jar || \
+           curl -f -o $(BUILD_ROOT)/lib/$$lib` $(PLUGINS_CI)/plugin-$$lib-bazel-master-$(BRANCH)/lastSuccessfulBuild/artifact/bazel-bin/plugins/$$lib/$$lib.jar); \
         done
 
 $(TAR_OUT): $(WAR) plugins libs $(CONFIGS)
