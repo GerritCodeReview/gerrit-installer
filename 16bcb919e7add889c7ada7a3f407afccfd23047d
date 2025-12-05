@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "b9df3b92_122f5a13",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4427278
+      },
+      "writtenOn": "2025-12-05T18:40:31Z",
+      "side": 1,
+      "message": "From 16bcb919e7add889c7ada7a3f407afccfd23047d Mon Sep 17 00:00:00 2001\nFrom: Luca Milanesio \u003cluca.milanesio@gmail.com\u003e\nDate: Mon, 29 Sep 2025 22:39:31 +0100\nSubject: [PATCH] Set Gerrit to 3.13.0-rc0\n\nChange-Id: I4ed86f124978a64044ce7739c2e3a1bbff4ea43e\n---\n\ndiff --git a/Version.mk b/Version.mk\nindex 9d54c7d..1a99569 100644\n--- a/Version.mk\n+++ b/Version.mk\n@@ -1,4 +1,4 @@\n-VERSION\u003d3.12.2\n-WAR_VERSION\u003d3.12.2\n-BRANCH\u003dstable-3.12\n-RELEASE\u003d1\n+VERSION\u003d3.13.0\n+WAR_VERSION\u003d3.13.0-rc0\n+BRANCH\u003dstable-3.13\n+RELEASE\u003d0rc0",
+      "revId": "16bcb919e7add889c7ada7a3f407afccfd23047d",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
