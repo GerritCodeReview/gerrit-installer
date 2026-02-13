@@ -26,9 +26,12 @@ echo -n "Checking Java version ... "
 JAVA_VERSION=$(java -version 2>&1)
 [ $? != 0 ] && echo -e "NOT FOUND\nPlease install Java 21 or later and try again" && exit 2
 
-VERSION=`expr "$JAVA_VERSION" : '.*"\(21\..*\)["_]'`
+if [[ $JAVA_VERSION =~ .*\"(1\.)?([0-9]{1,2})\.[^\"_]+ ]]
+then
+  VERSION="${BASH_REMATCH[2]}"
+fi
 echo "$VERSION"
-test "$VERSION" "<" "17" && echo "ERROR: Java 21 or later is required by Gerrit" && exit 3
+test "$VERSION" -lt "21" && echo "ERROR: Java 21 or later is required by Gerrit" && exit 3
 
 # Script is invoked even before upgrade, we need to stop Gerrit if active
 GERRIT_PID=$(ps -o pid,command -u $USER | grep gerrit | awk '{print $1}')
