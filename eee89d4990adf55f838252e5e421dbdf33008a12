@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d9b43657_4dfedf27",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4639693
+      },
+      "writtenOn": "2026-02-13T14:52:38Z",
+      "side": 1,
+      "message": "Tested against multiple versions of java -version output.\nSee https://regex101.com/r/x4rhvD/2\n\nI also fail to understand why it is necessary to look for the java version during the installation of Gerrit anyway. What if I have a different JAVA_HOME set in /etc/default/gerritcodereview or javaHome in gerrt.config?\nJava version check should be implemented in gerrit.sh - if anywhere.",
+      "revId": "eee89d4990adf55f838252e5e421dbdf33008a12",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ]
+}
