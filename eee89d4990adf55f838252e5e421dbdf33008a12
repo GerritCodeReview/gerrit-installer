@@ -16,6 +16,57 @@
       "message": "Tested against multiple versions of java -version output.\nSee https://regex101.com/r/x4rhvD/2\n\nI also fail to understand why it is necessary to look for the java version during the installation of Gerrit anyway. What if I have a different JAVA_HOME set in /etc/default/gerritcodereview or javaHome in gerrt.config?\nJava version check should be implemented in gerrit.sh - if anywhere.",
       "revId": "eee89d4990adf55f838252e5e421dbdf33008a12",
       "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "39985675_f0f5bf7e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-25T12:23:03Z",
+      "side": 1,
+      "message": "Thanks for the fix: the regex could be simplified, as we support only Java 21 or later.",
+      "revId": "eee89d4990adf55f838252e5e421dbdf33008a12",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d03bbd98_4ebe88c8",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-25T12:23:03Z",
+      "side": 1,
+      "message": "```suggestion\nif [[ $JAVA_VERSION \u003d~ .*\\\"([1-9][0-9]*)\\.* ]]\n```",
+      "revId": "eee89d4990adf55f838252e5e421dbdf33008a12",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "e8bcbeef_3f8d2122",
+        "filename": "fpm/scripts/before-install.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1006192
+      },
+      "writtenOn": "2026-03-25T12:23:03Z",
+      "side": 1,
+      "message": "```suggestion\n  VERSION\u003d\"${BASH_REMATCH[1]}\"\n```",
+      "revId": "eee89d4990adf55f838252e5e421dbdf33008a12",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
     }
   ]
 }
