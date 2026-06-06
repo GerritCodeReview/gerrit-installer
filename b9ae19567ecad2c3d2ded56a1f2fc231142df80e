@@ -1,5 +1,23 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "aed0e97c_c275515e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 4896472
+      },
+      "writtenOn": "2026-06-06T21:35:33Z",
+      "side": 1,
+      "message": "From b9ae19567ecad2c3d2ded56a1f2fc231142df80e Mon Sep 17 00:00:00 2001\nDate: Wed, 09 Oct 2024 13:23:01 +0100\nSubject: [PATCH] Set Gerrit to 3.8.9\n\nChange-Id: I96b1b76795b9d888e1aaa8d967490f4958cd45f0\n---\n\ndiff --git a/fpm/Makefile b/fpm/Makefile\nindex cf228b5..f58b3ca 100644\n--- a/fpm/Makefile\n+++ b/fpm/Makefile\n@@ -1,5 +1,5 @@\n-VERSION\u003d3.8.8\n-WAR_VERSION\u003d3.8.8\n+VERSION\u003d3.8.9\n+WAR_VERSION\u003d3.8.9\n BRANCH\u003dstable-3.8\n URL\u003dhttps://storage.googleapis.com/gerrit-releases/gerrit-$(WAR_VERSION).war\n CI_URL\u003dhttps://gerrit-ci.gerritforge.com\ndiff --git a/macOS/Makefile b/macOS/Makefile\nindex 77b4759..2513e7c 100644\n--- a/macOS/Makefile\n+++ b/macOS/Makefile\n@@ -1,4 +1,4 @@\n-VERSION :\u003d 3.8.8\n+VERSION :\u003d 3.8.9\n \n all: server",
+      "revId": "b9ae19567ecad2c3d2ded56a1f2fc231142df80e",
+      "serverId": "173816e5-2b9a-37c3-8a2e-48639d4f1153"
+    }
+  ],
   "submitRequirementResults": [
     {
       "submitRequirement": {
@@ -16,7 +34,7 @@
       },
       "applicabilityExpressionResult": {},
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"label:Code-Review=MAX,user=non_uploader AND -label:Code-Review=MIN"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":["label:Code-Review=MAX,user=non_uploader"],"failingAtoms":["label:Code-Review=MIN"]}
+        "value": {"expression":{"expressionString":"label:Code-Review=MAX,user=non_uploader AND -label:Code-Review=MIN"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":["label:Code-Review=MAX,user=non_uploader"],"failingAtoms":["label:Code-Review=MIN"],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "b9ae19567ecad2c3d2ded56a1f2fc231142df80e",
@@ -44,10 +62,10 @@
         "allowOverrideInChildProjects": false
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"message:\"^.*(D|d)(O|o) (N|n)(O|o)(T|t) (S|s)(U|u)(B|b)(M|m)(I|i)(T|t).*\""},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["message:\"^.*(D|d)(O|o) (N|n)(O|o)(T|t) (S|s)(U|u)(B|b)(M|m)(I|i)(T|t).*\""]}
+        "value": {"expression":{"expressionString":"message:\"^.*(D|d)(O|o) (N|n)(O|o)(T|t) (S|s)(U|u)(B|b)(M|m)(I|i)(T|t).*\""},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["message:\"^.*(D|d)(O|o) (N|n)(O|o)(T|t) (S|s)(U|u)(B|b)(M|m)(I|i)(T|t).*\""],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"is:false"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"is:false"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "b9ae19567ecad2c3d2ded56a1f2fc231142df80e",
@@ -79,13 +97,13 @@
         "allowOverrideInChildProjects": false
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"has:unresolved"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["has:unresolved"]}
+        "value": {"expression":{"expressionString":"has:unresolved"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["has:unresolved"],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"-has:unresolved"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"-has:unresolved"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {
-        "value": {"expression":{"expressionString":"hashtag:allow-unresolved-comments"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"hashtag:allow-unresolved-comments"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "patchSetCommitId": "b9ae19567ecad2c3d2ded56a1f2fc231142df80e",
       "legacy": {
@@ -112,10 +130,10 @@
         "allowOverrideInChildProjects": false
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"is:review-enforced_gerrit"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["is:review-enforced_gerrit"]}
+        "value": {"expression":{"expressionString":"is:review-enforced_gerrit"},"status":"FAIL","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["is:review-enforced_gerrit"],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"is:review-enforcement-satisfied_gerrit"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[]}
+        "value": {"expression":{"expressionString":"is:review-enforcement-satisfied_gerrit"},"status":"NOT_EVALUATED","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":[],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "b9ae19567ecad2c3d2ded56a1f2fc231142df80e",
@@ -143,10 +161,10 @@
         "allowOverrideInChildProjects": true
       },
       "applicabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"-branch:refs/meta/config"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["branch:refs/meta/config"]}
+        "value": {"expression":{"expressionString":"-branch:refs/meta/config"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":[],"failingAtoms":["branch:refs/meta/config"],"atomExplanations":{"value":null}}
       },
       "submittabilityExpressionResult": {
-        "value": {"expression":{"expressionString":"label:Verified=MAX AND -label:Verified=MIN"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":["label:Verified=MAX"],"failingAtoms":["label:Verified=MIN"]}
+        "value": {"expression":{"expressionString":"label:Verified=MAX AND -label:Verified=MIN"},"status":"PASS","errorMessage":{"value":null},"passingAtoms":["label:Verified=MAX"],"failingAtoms":["label:Verified=MIN"],"atomExplanations":{"value":null}}
       },
       "overrideExpressionResult": {},
       "patchSetCommitId": "b9ae19567ecad2c3d2ded56a1f2fc231142df80e",
