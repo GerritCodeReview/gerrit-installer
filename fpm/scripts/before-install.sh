@@ -31,7 +31,7 @@ then
   VERSION="${BASH_REMATCH[2]}"
 fi
 echo "$VERSION"
-test "$VERSION" -lt "21" && echo "ERROR: Java 21 or later is required by Gerrit" && exit 3
+test "$VERSION" -lt "25" && echo "ERROR: Java 25 or later is required by Gerrit" && exit 3
 
 # Script is invoked even before upgrade, we need to stop Gerrit if active
 GERRIT_PID=$(ps -o pid,command -u $USER | grep gerrit | awk '{print $1}')
